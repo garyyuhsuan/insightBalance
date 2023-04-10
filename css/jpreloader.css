@@ -1,0 +1,86 @@
+#jpreOverlay {
+  background-color: rgb(138, 138, 138); 
+}
+#jpreSlide{
+  font-size:100px;
+  font-weight:bold;
+  color:rgb(233, 62, 62);
+  text-align:center;
+  width:100%;
+  height:30%;
+
+}
+
+#jprePercentage, #jpreButton {display:none}
+#jSplash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+    /* *, *::before, *::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    } */
+    
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    section {
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;				 			 
+		 animation: animateBg 10s linear infinite;
+		 width: 85%;
+		height: 320px;
+		background: #fff;
+		border-radius: 25px;
+		position:relative;
+	}
+
+
+	section .preloader {
+		 position: relative;
+		 width: 7.5rem;
+		 height: 7.5rem;
+
+	}
+
+	section .preloader span {
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+		 transform: rotate(calc(20deg * var(--i)));
+	}
+
+	section .preloader span::before {
+		 content: "";
+		 position: absolute;
+		 left: 0;
+		 top: 0;
+		 width: 15px;
+		 height: 15px;
+		 border-radius: 50%;
+		 background: #CB8C7A;				 
+		 animation: animate 2s linear infinite;
+		 animation-delay: calc(0.1s * var(--i))
+	}
+
+	@keyframes animate {
+		 0% {
+			  transform: scale(1);
+		 }
+
+		 80%,
+		 100% {
+			  transform: scale(0);
+		 }
+	}

@@ -1,0 +1,54 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%list-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%pseudo {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //   width: $size-md height: $size-md
+}
+
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+%flex-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+// icon覆蓋顏色
+
+%white-cover__64 {
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 42px;
+  left: 32px;
+  display: block;
+  position: absolute;
+  background-color: $white;
+}

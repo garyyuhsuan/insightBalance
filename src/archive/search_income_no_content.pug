@@ -1,0 +1,199 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars 
+  - var data_header = {hasArrow: false, hasArrowHeader: true, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/jqpreloader.css")
+  link(rel="stylesheet" href="./css/index.css")
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper.income 
+      .main
+        .searching-area
+          .bold 收支手帳
+          .flex-box
+            a(href="search.html").search-white-img
+              img(src="./images/global/icon_search_white.svg", alt="") 
+            a(href="filter.html").filter-img
+              img(src="./images/global/icon_filter.svg", alt="") 
+        
+        //- 時間區間篩選
+        include component/_tabs-time.pug
+        .balance-area
+          .flex-box
+            p 淨收支
+            a#info.info
+              img(src="./images/global/icon_info_white.svg", alt="")
+            #info_msg.balance-area-msg(style="display:none") 外幣折算規則 : 若有交易匯率，以原始交易匯率折算，否則以交易日日終匯率折算。
+          .bold $ 20,000 
+      .pills-area
+        a(href="index.html").pill-income.active
+          span 
+          span 收入
+          span 141,200
+
+        a(href="index_e.html").pill-expenses
+          span 
+          span 支出
+          span 41,200
+
+      .round-shape 
+        #myHeader.header 
+          a#tab1.bold 分類
+          a#tab2.bold.active 明細
+
+      #content
+        #categories(style="display:none")   
+           .categories 
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2" style="width:15%")
+                        .earning__most  
+                        img(src="./images/icons/icon_salary.svg", alt="薪資")                    
+                      td.bold 薪資 
+                       span 賺最多
+                      td 2 筆
+                    tr
+                      td 65%
+                      td 50,585
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_cash.svg", alt="利息")
+                      td.bold 利息 
+                      td 10 筆
+                    tr
+                      td 15%
+                      td 8,423
+            li 
+              a(href="")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_petty_money.svg", alt="獎金")
+                      td.bold 獎金 
+                        //span 賺最多
+                      td 1 筆
+                    tr
+                      td 8%
+                      td 5,180
+        
+        
+        #details
+
+          .details(style="overflow:hidden")
+            .search__no_result 
+               img(src="./images/global/no_content.svg")
+               h4 尚無明細內容
+               .search__no_result__txt 存錢、刷卡、轉帳、投資理財，<br>都推薦使用永豐提供的服務唷   
+          
+
+            .gotop#gotop2(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })") 
+            .total__summary#totalSummary2 
+              a(href="index_e.html")  看支出
+              a  
+                span 總金額
+                span 1,455,445 
+
+        //-提示訊息
+        .message_board#msg_board
+          table.msg 
+            tbody 
+              tr 
+                td(rowspan="2" style="width:30%;text-align:center") 
+                  img(src="./images/global/update_checkMark.svg", alt="資料更新")
+                td 資料更新時間如下：
+              tr 
+                td.duration 銀行：2022 年 3 月 20 日<br>信用卡：2022 年 3 月 20 日
+
+    .popup2#myModal
+      .content
+        .content-title
+          h3 選擇排序
+          a(href="") 取消
+        ul.sorting 
+          li 
+            a(href="").active 金額由大到小
+          li
+            a(href="") 金額由小到大 
+          li
+            a(href="") 時間由近至遠
+          li
+            a(href="") 時間由遠至近  
+
+    .popup2#myModal1
+      form(action="") 
+        .content
+          h3 其他日期
+
+          .dateFilter__content
+            .c-radio#custom60
+              input(type="radio" name="dateFilter" checked)#radio_01.radio__input
+              label(for="radio_01").radio__pill 近60天
+            .c-radio#custom90 
+              input(type="radio" name="dateFilter")#radio_02.radio__input
+              label(for="radio_02").radio__pill 近90天
+            .c-radio#customAll 
+              input(type="radio" name="dateFilter")#radio_03.radio__input
+              label(for="radio_03").radio__pill 全部
+            .c-radio#customDuration
+              input(type="radio" name="dateFilter")#radio_04.radio__input
+              label(for="radio_04").radio__pill 自訂      
+
+          div#customDurationInput(style="display:none")
+            h3 自訂
+            table.filter__date 
+              tbody 
+                tr 
+                  td 
+                    input#date-input-start.filter__date(type='date' onclick='event.preventDefault()' required='')
+                  td --
+                  td 
+                    input(type='date' onclick='event.preventDefault()' required='')#date-input-end.filter__date
+                  td
+                    p#warningText
+          
+    
+              
+          .btnSet#btn-wrap
+            a#cancelBtn 取消
+            a.primary#submitBtn 確定
+      #scrollBlock
+        .date-selector-header
+          
+          .date-title
+            p#date-title 標題
+          #date-ok
+            p 完成
+        .date-selector-title
+          div
+            p 年
+          div 
+            p 月
+          div 
+            p 日
+        .date-selector
+          #year1.year
+          #month1.month
+          #day1.day  
+
+
+//- 單頁 Javascript
+append script  
+  script(src="./js/vendor/custom-select.securejs")
+  script(src="./js/vendor/jquery.preload.min.securejs")
+  script(src="./js/vendor/pullkeep.securejs")  
+  script(src="./js/index.securejs") 
+  script(type='text/javascript' src='./src/js/scrollDate.js')

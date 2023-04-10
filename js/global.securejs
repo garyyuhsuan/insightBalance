@@ -1,0 +1,89 @@
+var toast = document.querySelector("#msg_board");
+
+if (toast) {
+  window.onload=function(){
+    setTimeout(() =>{
+    toast.classList.add("active");
+  }, 500)
+    setTimeout(() =>{
+    toast.classList.remove("active");
+    toast.classList.add("hidden");
+    }, 3500)
+  }
+  
+  toast.addEventListener("click", () =>{
+    setTimeout(() =>{
+      toast.classList.add("hidden");
+    },500)
+  })
+}
+
+
+//swiper duration
+var swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: false,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // Default parameters
+  slidesPerView: 2.25,
+  centeredSlides: true,
+  // spaceBetween: 2,
+  initialSlide: 99,
+});
+
+//Modal from bottom
+(function ($) {
+  $.fn.popup = function () {
+    return this.each(function () {
+      var obj = $(this),
+        objTarget = $(this).attr("href");
+
+      obj.click(function () {
+        //onclick event, 'list' fadein
+        // console.log();
+        $("body").append("<div id='overlay'></div>");
+        $("html").css("overflow", "hidden");
+        $("#overlay").css({
+          // 'opacity': 0,
+          "z-index": "900",
+        });
+        $(objTarget).stop(false, true).fadeIn();
+      });
+
+      $(document).keyup(function (event) {
+        //keypress event, fadeout on 'escape'
+        if (event.keyCode == 27) {
+          $(objTarget).fadeOut(400, function () {
+            $("html").css("overflow", "auto");
+            $("body").find("#overlay").remove();
+          });
+        }
+      });
+
+      $(objTarget)
+        .find("a")
+        .click(function () {
+          // 增加判斷，如果判斷是沒有過不收合
+          if (popup_warning) {
+            console.log("popup_warning");
+          } else {
+            $(objTarget).fadeOut(400, function () {
+              $("html").css("overflow", "auto");
+              $("body").find("#overlay").remove();
+            });
+          };
+        });
+    });
+  };
+})(jQuery);
+
+$(document).ready(function () {
+  $(".popup_toggle").popup();
+});

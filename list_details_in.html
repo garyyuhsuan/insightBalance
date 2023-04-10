@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:title" content="智慧收支帳本 - 永豐銀行">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="author" content="永豐銀行">
+    <meta name="copyright" content="永豐銀行">
+    <meta name="description" content="">
+    <title>智慧收支帳本 - 永豐銀行</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/layout/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+        <div class="container-fluid maxWidth-768">
+          <div class="header-content">  
+            <div class="flex-left icon-arrow-back"><img src="./images/global/icon_arrow_back.svg" alt="" onclick="history.back()">
+            </div>
+            <div class="flex-center text-center bold">智慧收支帳本</div>
+            <div class="flex-right icon-backtosinopac">
+            </div>
+          </div>
+        </div>
+    <div class="popup">
+      <div class="popup-overlay popup-toggle"> </div>
+      <div class="popup-wrapper popup-transition"> 
+        <div class="popup-header bold"><img src="./images/global/triangle_alert_red.svg" alt="" id="img_alert">
+          <div class="popup-heading">即將離開</div>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content">您即將離開智慧收支帳本，回到行動銀行</div>
+          <div class="btnSet__ex" id="btnSet-popup"><a class="popup-toggle">留下來</a><a class="primary popup-toggle">忍痛退出</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="list-detail container-fluid maxWidth-768">
+      <div class="wrapper income">
+        <div class="main__list--detail"></div>
+      </div>
+      <div class="canvas income">
+        <div class="list-detail__container flex-box border-bottom--in">
+          <div class="list-detail__container-left">
+            <div class="icon-listDetails icon-listDetails__invest"></div>
+          </div>
+          <div class="list-detail__container-right">
+            <div class="flex-top flex-between">
+              <div class="flex-left">
+                <div class="list-detail__title bold">投資</div>
+                <div class="edit-img"><a href="edit_categories_in.html"><img src="./images/global/icon_edit_gray.svg" alt=""></a></div>
+              </div>
+              <div class="flex-right">     
+                <div class="close-img"><a href="category_details_in.html"><img src="./images/global/icon_close_x.svg" alt=""></a></div>
+              </div>
+            </div>
+            <div class="flex-bottom">
+              <div class="list-detail__amount--in bold">32,423 </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-detail__container">
+          <div class="list-detail__list">
+            <div class="flex-box flex-between"><span>交易說明</span>
+              <div class="edit-description-img"><a class="popup_toggle" href="#myModal"><img src="./images/global/icon_edit_gray.svg" alt=""></a></div>
+            </div>
+            <div class="bold">豐存股-定股交割</div>
+          </div>
+          <div class="list-detail__list"><span>交易日</span>
+            <div class="bold">2022/03/20</div>
+          </div>
+          <div class="list-detail__list"><span>帳號資訊</span>
+            <div class="bold">營業部DAWHO台幣活期存款         </div>
+          </div>
+          <div class="list-detail__list"><span>交易通路</span>
+            <div class="bold">永豐證券 </div>
+          </div>
+          <div class="list-detail__list"><span>匯率</span>
+            <div class="bold">-</div>
+          </div>
+          <div class="list-detail__list">
+            <div class="flex-between">
+              <div class="bold">這筆不算 </div>
+              <label class="switch">
+                <input type="checkbox" checked><span class="slider round"></span>
+              </label>
+            </div>
+            <div class="buttonSet"> <a href="category_details_in.html"> 取消</a><a class="invisible" href="category_details_in.html">套用      </a></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup2" id="myModal"> 
+        <div class="content">
+          <form action="post">
+            <div class="edit-popup__title flex-between">
+              <div class="bold">交易說明</div>
+              <div class="flex-box">
+                <div class="reset-btn-img"><img src="./images/global/restore_description.svg" alt=""></div>
+                <button class="rest" type="reset">回復預設說明</button>
+              </div>
+            </div>
+            <input class="input__description" type="text" placeholder="請輸入交易說明" value="豐存股-定股交割">
+            <div class="buttonSet"> <a href="">取消</a><a class="primary" href="">儲存</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vendor/jquery-3.6.0.min.securejs"></script>
+    <script src="./js/vendor/jquery-ui.min.securejs"></script>
+    <script src="./js/vendor/jquery.preload.min.securejs"></script>
+    <script src="./js/vendor/swiper-bundle.min.securejs"></script>
+    <script src="./js/global.securejs"></script>
+    <script>
+      $('.popup-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.popup').toggleClass('is-visible');
+        $('body').toggleClass('scroll-fixed');
+      
+      });
+    </script>
+    <script></script>
+  </body>
+</html>

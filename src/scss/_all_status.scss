@@ -1,0 +1,42 @@
+// @import "layout";
+
+
+.main {
+  &__status {
+    background: $background;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 50px);
+    width: 100%;
+    // max-width: 768px;
+    align-items: center;
+  }
+}
+.status {
+  text-align: center;
+  color: $gray-6;
+
+  &__description_heading {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+  }
+  &__description {
+    font-size: 0.9rem;
+    padding: 0px 15px 10px 15px;
+    line-height: 1.5rem;
+  }
+}
+.btn_gotIt {
+  display: inline-block;
+  padding: 8px 0px;
+  width: 120px;
+  margin: 12px auto;
+  border-radius: 4px;
+  background: #fff;
+  color: $gray-9;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid $gray-9;
+}

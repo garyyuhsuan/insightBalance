@@ -1,0 +1,28 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/all_status.css")
+
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-414
+    .wrapper
+      .main
+        .status 
+          img(src="./images/global/status_lose_connection.svg" alt="") 
+          .status.status__description_heading 您已離線 
+          .status.status__description 請檢查連線狀態
+          a(href="").btn_gotIt 我知道了
+
+//- 單頁 Javascript
+append script  
+
+
+
+

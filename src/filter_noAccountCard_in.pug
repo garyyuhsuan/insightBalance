@@ -1,0 +1,77 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style    
+  link(rel="stylesheet" href="./css/master.css")
+
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper.bg__filter
+      .main__filter
+        form(action="post") 
+          h4 帳務類型
+          .account__type
+            .header-table
+              .header-table__row
+                .header-table__col
+                  p.title 存款帳戶
+                .header-table__col
+                  p.fc-gray-500 尚無有效帳戶
+
+          .account__type
+            .header-table
+              .header-table__row
+                .header-table__col
+                  p.title 信用卡
+                .header-table__col
+                  p.fc-gray-500 尚無有效信用卡
+
+        h4(style="margin-top:30px") 金額                
+        .button__amount--in#m500up 500 +
+        .button__amount--in#m5000up 5,000 +
+        .button__amount--in#m10000up 10,000 +
+
+
+        //-slider2
+        .num__limit
+
+          .num__limit-low
+            label(for="lowerLimit") 金額下限
+            input.hide-arrows(type="number" id="lowerLimit" class="lowerLimit" name="lowerLimit" placeholder="請輸入金額" onchange="slideOnelimit()")
+
+          .num__dash
+
+          .num__limit-up
+            label(for="upperLimit") 金額上限
+            input.hide-arrows(type="number" id="upperLimit" class="upperLimit" name="upperLimit" placeholder="請輸入金額" onchange="slideTwolimit()")
+
+        .num__range
+          .slider__track--in
+            input(type="range" min="0" max="3000000" value="0" id="slider-1" oninput="slideOne()" )
+            input(type="range" min="0" max="3000000" value="3000000" id="slider-2" oninput="slideTwo()" )
+
+
+      .main__filter.position__fixed.boxsize__borderbox.bgColor__btnSet
+        .btnSet__in
+          a(href="index.html") 取消
+          a.primary  儲存 
+
+
+//- 單頁 Javascript
+append script  
+  script(src="./js/filterIN.securejs")
+
+
+
+
+
+
+
+
+

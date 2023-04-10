@@ -1,0 +1,69 @@
+
+@import "layout/variables";
+@import "layout/utilities";
+@import "layout/extend";
+@import "layout/icons";
+@import "layout/pills";
+@import "layout/icons_36x36";
+@import "layout/icons_40x40";
+@import "layout/icons_64x64";
+@import "layout/components";
+@import "layout/popup_modal";
+@import "component/loader";
+@import "component/scrollDate";
+
+body {
+  margin: unset;
+}
+
+header {
+  background-color: #fff;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.maxWidth-768 {
+  max-width: 768px;
+  overflow: hidden;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px 20px;
+
+  div {
+    flex-grow: 1;
+    img {
+      width: 24px;
+    }
+  }
+  .flex-left{
+    display: flex;
+    width: 25%;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    line-height: 24px;
+  }
+  .flex-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}

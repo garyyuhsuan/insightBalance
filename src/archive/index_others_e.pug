@@ -1,0 +1,457 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars 
+  - var data_header = {hasArrow: false, hasArrowHeader: true, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/index_e.css")
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-414
+    .wrapper.expense
+      .main
+        .searching-area.flex-between
+          .bold 收支手帳
+          .flex   
+            a(href="search_e.html").search-white-img
+              img(src="./images/global/icon_search_white.svg", alt="") 
+            a(href="filter_e.html").filter-img
+              img(src="./images/global/icon_filter.svg", alt="")
+        .duration-expense
+          a(href="index_e.html") 週
+          a(href="index_month_e.html") 月
+          a(href="index_year_e.html") 年
+          a.active(href="index_others_e.html") 其他
+
+        .swiper__others
+          .date__edit 2022/01/01~2022/12/31
+          a.popup_toggle(href="#myModal1") 
+            img(src="./images/global/icon_edit.svg")
+            
+        #info_msg.info__msg(style="display:none") 外幣折算規則 : 若有交易匯率，以原始交易匯率折算，否則以交易日日終匯率折算。
+        .balance
+          span 淨收支
+            a#info.info
+          span.bold $ 20,000
+      .pills-area
+        a(href="index.html").pill-income
+          span 
+          span 收入
+          span 141,200
+
+        a(href="index_e.html").pill-expenses.active
+          span 
+          span 支出
+          span 41,200
+
+      .round-shape 
+        #myHeader.header 
+          a#tab1.bold.active 分類
+          a#tab2.bold 明細
+
+      #content
+        #categories    
+          .categories 
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2" style="width:15%")
+                        .earning__most  
+                        img(src="./images/icons/icon_salary.svg", alt="薪資")                    
+                      td.bold 薪資 
+                       span 賺最多
+                      td 2 筆
+                    tr
+                      td 65%
+                      td 50,585
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_cash.svg", alt="利息")
+                      td.bold 利息 
+                      td 10 筆
+                    tr
+                      td 15%
+                      td 8,423
+            li 
+              a(href="")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_petty_money.svg", alt="獎金")
+                      td.bold 獎金 
+                        //span 賺最多
+                      td 1 筆
+                    tr
+                      td 8%
+                      td 5,180
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_home.svg", alt="租金")
+                      td.bold 租金 
+                        //span 賺最多
+                      td 2 筆
+                    tr
+                      td 65%
+                      td 50,585
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_invest.svg", alt="投資")
+                      td.bold 投資 
+                        //span 賺最多
+                      td 10 筆
+                    tr
+                      td 15%
+                      td 8,423
+            li 
+              a(href="")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_card.svg", alt="現金回饋")
+                      td.bold 現金回饋 
+                        //span 賺最多
+                      td 1 筆
+                    tr
+                      td 8%
+                      td 5,180
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_insurance.svg", alt="保險")
+                      td.bold 保險 
+                      td 2 筆
+                    tr
+                      td 65%
+                      td 50,585
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_cash.svg", alt="退休金")
+                      td.bold 退休金 
+                        //span 賺最多
+                      td 10 筆
+                    tr
+                      td 15%
+                      td 8,423
+            li 
+              a(href="")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_cash.svg", alt="零用金")
+                      td.bold 零用金 
+                        //span 賺最多
+                      td 1 筆
+                    tr
+                      td 8%
+                      td 5,180
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_insurance.svg", alt="代墊款")
+                      td.bold 代墊款
+                        //span 賺最多 
+                      td 2 筆
+                    tr
+                      td 65%
+                      td 50,585
+            li 
+              a(href="category_details.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_gifts.svg", alt="贈與")
+                      td.bold 贈與 
+                        //span 賺最多
+                      td 10 筆
+                    tr
+                      td 15%
+                      td 8,423
+            li 
+              a(href="")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2" style="width:15%") 
+                        img(src="./images/icons/icon_others.svg", alt="其他")
+                      td.bold 其他 
+                        //span 賺最多
+                      td 1 筆
+                    tr
+                      td 8%
+                      td 5,180
+
+        #details(style="display:none")
+          .details__notice            
+            div 包含「收入」的搜尋結果如下
+            div
+              img(src="./images/global/icon_close_white.svg")
+          .details(style="overflow:hidden")
+            .filter__group 
+              a(href="").btn 金額自訂 
+                 img(src="./images/global/icon_close_white.svg")
+              a(href="").btn 帳務類別(4)
+                 img(src="./images/global/icon_close_white.svg")
+            table.sorting 
+              tbody 
+                tr 
+                  td  共189筆
+                  td  
+                    a(href="#myModal").icon__sorting.popup_toggle
+            .heading__date 2022/03 
+            ul.list
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__invest 投資
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款        
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__unDefine 這筆是啥 
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 10,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep  
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__salary 薪資
+                        td 
+                          span.list__item__name 薪資
+                        td  
+                          .amount 49,200
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__invest 投資
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")  
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__interest 利息
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__bonus 獎金
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__rent 租金
+                        td 
+                          span.list__item__name 租金
+                        td  
+                          .amount 10,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__salary 薪資
+                        td 
+                          span.list__item__name 薪資
+                        td  
+                          .amount 49,200
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep 
+                a(href="list_details.html")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__invest 投資
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html")  
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__interest 利息
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details.html  ")
+                  table.list__item
+                    tbody 
+                      tr 
+                        td  
+                            span.pills__bonus 投資
+                        td 
+                          span.list__item__name 股票款3034-聯詠9股票款3034-聯詠9
+                        td  
+                          .amount 100,000
+                      tr 
+                        td 2022/03/22
+                        td 營業部DAWHO活期儲蓄存款 
+
+          .gotop#gotop(onclick="topFunction()") 
+          .total__summary 
+            a(href="")  看支出
+            a  
+              span 總金額
+              span 1,455,445 
+
+     
+  .popup2#myModal
+    .content
+      h3 選擇排序
+      ul.sorting 
+        li 
+          a(href="").active 金額由大到小
+        li
+          a(href="") 金額由小到大 
+        li
+          a(href="") 日期由大到小
+        li
+          a(href="") 日期由大到小  
+
+      a(href="")
+        img(src="./images/global/icon_close.svg", alt="")
+
+  .popup2#myModal1
+    form(action="") 
+      .content
+        h3 其他日期
+        .date__filter
+          a(href="")
+            .button__amount 近60天
+          a(href="")
+            .button__amount 近90天
+          a(href="")
+            .button__amount 全部
+          a(href="")
+            .button__amount.active 自訂
+        
+        h3 自訂
+          span 自訂區間最長為一年
+        table.filter__date 
+          tbody 
+            tr 
+              td 
+                input(type="date").filter__date
+              td -
+              td 
+                input(type="date").filter__date
+            
+
+
+        .btnSet 
+          a(href="")
+              button 取消
+          a(href="")  
+              button.primary 確定
+
+
+//- 單頁 Javascript
+append script  
+  script(src="./js/index.securejs") 
+  script(src="./js/vendor/custom-select.securejs")
+  script(src="./js/vendor/jquery.preload.min.securejs") 
+  script(src="./js/vendor/pullkeep.js")
+  script(src="./js/AD-pullkeep.js")
+  script.
+   
+
+  
+     

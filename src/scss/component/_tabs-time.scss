@@ -1,0 +1,301 @@
+//// 時間區間 - 收入
+.duration-income {
+  position: relative;
+  background-color: $teal;
+  border-radius: 18px;
+  height: 36px;
+  margin-bottom: 8px;
+
+  //// 隱藏 input - radio
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 25%;
+    height: 32px;
+    margin: 2px 0;
+    z-index: 100;
+  }
+
+  //// 週月年其他 - 文字樣式
+  span {
+    color: $white;
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 0;
+    text-align: center;
+    z-index: 60;
+  }
+
+  //// 選取到的 Tab 樣式
+  .pill-bg {
+    width: 23%;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    top: 2px;
+    background: $white;
+  }
+
+  //// 定錨 - 個別 Tab 與 文字 的位置
+  #byWeek,
+  #byWeek + span {
+    left: 0;
+  }
+
+  #byMonth,
+  #byMonth + span {
+    left: 25%;
+  }
+
+  #byYear,
+  #byYear + span {
+    left: 50%;
+  }
+
+  #byOther,
+  #byOther + span {
+    left: 75%;
+  }
+
+  //// 定錨 - 選取到的 tab
+  #byWeek:checked ~ .pill-bg {
+    left: 2px;
+  }
+
+  #byMonth:checked ~ .pill-bg {
+    left: calc(25% + 2px);
+  }
+
+  #byYear:checked ~ .pill-bg {
+    left: calc(50% + 2px);
+  }
+
+  #byOther:checked ~ .pill-bg {
+    left: calc(77% - 2px);
+  }
+
+  //// 改變被選取到的 文字 樣式
+  input:checked + span {
+    color: $teal;
+  }
+}
+//// 時間區間 - 支出
+.duration-expense {
+  position: relative;
+  background-color: $red;
+  border-radius: 18px;
+  height: 36px;
+  margin-bottom: 8px;
+
+  //// 隱藏 input - radio
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 25%;
+    height: 32px;
+    margin: 2px 0;
+    z-index: 100;
+  }
+
+  //// 週月年其他 - 文字樣式
+  span {
+    color: $white;
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 0;
+    text-align: center;
+    z-index: 60;
+  }
+
+  //// 選取到的 Tab 樣式
+  .pill-bg {
+    width: 23%;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    top: 2px;
+    background: $white;
+  }
+
+  //// 定錨 - 個別 Tab 與 文字 的位置
+  #byWeek,
+  #byWeek + span {
+    left: 0;
+  }
+
+  #byMonth,
+  #byMonth + span {
+    left: 25%;
+  }
+
+  #byYear,
+  #byYear + span {
+    left: 50%;
+  }
+
+  #byOther,
+  #byOther + span {
+    left: 75%;
+  }
+
+  //// 定錨 - 選取到的 tab
+  #byWeek:checked ~ .pill-bg {
+    left: 2px;
+  }
+
+  #byMonth:checked ~ .pill-bg {
+    left: calc(25% + 2px);
+  }
+
+  #byYear:checked ~ .pill-bg {
+    left: calc(50% + 2px);
+  }
+
+  #byOther:checked ~ .pill-bg {
+    left: calc(77% - 2px);
+  }
+
+  //// 改變被選取到的 文字 樣式
+  input:checked + span {
+    color: $red;
+  }
+}
+
+//// 動態效果
+.ease {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+//// 選取以切換 - 週/月/年/自訂
+#byWeek:checked ~ .swiper-week#swiperWeek {
+  display: block;
+}
+#byMonth:checked ~ .swiper-month#swiperMonth {
+  display: block;
+}
+#byYear:checked ~ .swiper-year#swiperYear {
+  display: block;
+}
+#byOther:checked ~ .swiper-other#swiperOthers {
+  display: block;
+}
+
+//// general swiper setting
+.swiper-week,
+.swiper-month,
+.swiper-year,
+.swiper-other {
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  display: none;
+  text-align: center;
+}
+
+//// duration-swiper (week, month, year)
+.duration-swiper {
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+  .swiper {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    .swiper-wrapper {
+      .swiper-slide{
+        a {
+          text-decoration: none;
+          overflow: hidden;
+          text-overflow: ellipsis !important;
+          white-space: nowrap;
+          width: 100%;
+          display: block;
+          color: $gray-9;
+          font-weight: 400;
+          font-size: 0.9rem;
+          line-height: 30px;
+          padding: 0;
+        }
+        // @media (max-width: 375px) {
+        //   a {
+        //     font-size: 10px;
+        //   }
+        // }
+      }
+      .swiper-slide-prev,
+      .swiper-slide-next{
+        opacity: .5;
+      }
+    }
+  }
+  .swiper-tool{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      margin-top: 0;
+      color: #9C9C9C;
+      height: 30px;
+      width: 10%;
+      &::after {
+        font-size: 1rem;
+      }
+    }
+    .swiper-button-prev {
+      &::after {
+        font-size: 1rem;
+        margin-right: auto;
+        margin-left: 0.5rem;
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+//// 自訂時間區間設定
+.search__others {
+  display: block;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  .date__edit {
+    font-size: 14px;
+    line-height: 30px;
+    color: $gray-9;
+  }
+  a{
+    padding: 3px;
+    img {
+      margin-left: 2px;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+    }
+  }
+}

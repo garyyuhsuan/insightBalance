@@ -1,0 +1,106 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style
+   link(rel="stylesheet" href="./css/search.css")
+
+   
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper
+      .main
+         form(action="")
+            .search__inputArea
+               span
+                  .flex-between
+                     .flex-left.flex-full
+                        input.search#searchInput(type="text" onfocus="showKeywords()" onblur="hideKeywords()" onkeyup="startSearchFilter()" name="keyWord" placeholder="請輸入關鍵字/標籤")
+                        img.clear-search-icon.js-clearSearchBox(src="./images/global/icon_clearSearch.svg", alt="刪除搜尋紀錄" style="opacity: 0;")
+                     a(href="index_e.html" style="margin-right:unset").cancel-btn-icon 返回
+         
+         //-自動顯示關鍵字
+         .search-result__content#searchTyped(style="display:none")
+            .search-result__list
+               .search-result__row
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     a(href="#") aaa
+               .search-result__row
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     a(href="#") bbb
+               .search-result__row
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     a(href="#") cc
+               .search-result__row
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     a(href="#") cacdc
+               .search-result__row
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     a(href="#") ccc  
+
+         //-有&無搜尋紀錄(.search_lists控制去留)        
+         .search-result__content#searchDefault
+            .search-result__title.flex-between
+               .title.bold 歷史搜尋
+               a#delete(href="").search_lists 
+                  img(src="./images/global/icon_trash_can.svg", alt="刪除")
+            .content.text-center#noSearchResult(style="display:none")  - 近期沒有搜尋紀錄 - 
+
+            .search-result__list.search_lists
+               .search-result__row.flex-between
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     div 股票
+                  .delete-btn
+                     a(href="#")
+                        img.delete-img(src="./images/global/icon_close_gray.svg")
+               .search-result__row.flex-between
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     div 電話費
+                  .flex-right.delete-btn
+                     a(href="#")
+                        img.delete-img(src="./images/global/icon_close_gray.svg")
+               .search-result__row.flex-between
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     div 房租
+                  .flex-right.delete-btn
+                     a(href="#")
+                        img.delete-img(src="./images/global/icon_close_gray.svg")
+               .search-result__row.flex-between
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     div 交通
+                  .flex-right.delete-btn
+                     a(href="#")
+                        img.delete-img(src="./images/global/icon_close_gray.svg")
+               .search-result__row.flex-between
+                  .flex-left.flex-full
+                     img.search-img(src="./images/global/icon_search.svg", alt="放大鏡")
+                     div 電話費
+                  .flex-right.delete-btn
+                     a(href="#")
+                        img.delete-img(src="./images/global/icon_close_gray.svg")
+
+            //- 關鍵字
+            h4 熱門搜尋 
+            .keyWords__btn 私房錢 Plus
+            .keyWords__btn 女人家
+            .keyWords__btn 換匯優利
+            .keyWords__btn DAWHO
+            .keyWords__btn iBrAin
+            .keyWords__btn 信用卡
+
+//- 單頁 Javascript
+append script
+   script(src="./js/search.securejs")

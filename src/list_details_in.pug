@@ -1,0 +1,81 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style    
+  link(rel="stylesheet" href="./css/master.css")
+
+//- main 區塊
+append main 
+  .list-detail.container-fluid.maxWidth-768
+    .wrapper.income
+      .main__list--detail
+    .canvas.income
+      .list-detail__container.flex-box.border-bottom--in
+        .list-detail__container-left
+          .icon-listDetails.icon-listDetails__invest
+        .list-detail__container-right
+          .flex-top.flex-between
+            .flex-left
+              .list-detail__title.bold 投資
+              .edit-img
+                a(href="edit_categories_in.html")
+                  img(src="./images/global/icon_edit_gray.svg", alt="")
+            .flex-right      
+              .close-img
+                a(href="category_details_in.html")
+                  img(src="./images/global/icon_close_x.svg", alt="")
+          .flex-bottom
+            .list-detail__amount--in.bold 32,423 
+      //- list-detail 下方內容
+      .list-detail__container
+        .list-detail__list
+            .flex-box.flex-between
+              span 交易說明
+              .edit-description-img
+                a(href="#myModal").popup_toggle
+                  img(src="./images/global/icon_edit_gray.svg", alt="")
+            .bold 豐存股-定股交割
+        .list-detail__list
+            span 交易日
+            .bold 2022/03/20
+        .list-detail__list
+            span 帳號資訊
+            .bold 營業部DAWHO台幣活期存款         
+        .list-detail__list
+            span 交易通路
+            .bold 永豐證券 
+        .list-detail__list
+            span 匯率
+            .bold -
+        .list-detail__list
+          .flex-between
+              .bold 這筆不算 
+              label.switch
+                input(type="checkbox" checked)
+                span.slider.round
+          .buttonSet 
+            a(href="category_details_in.html")  取消
+            //-a(href="category_details.html").primary 套用
+            a(href="category_details_in.html").invisible 套用      
+
+    .popup2#myModal  
+      .content
+        form(action="post")
+          .edit-popup__title.flex-between
+            .bold 交易說明
+            .flex-box
+              .reset-btn-img
+                img(src="./images/global/restore_description.svg", alt="") 
+              button.rest(type='reset') 回復預設說明
+          input(type="text" placeholder="請輸入交易說明" value="豐存股-定股交割").input__description 
+          .buttonSet 
+            a(href="") 取消
+            a(href="").primary 儲存
+
+//- 單頁 Javascript
+append script  
+  script. 

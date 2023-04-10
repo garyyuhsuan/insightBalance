@@ -1,0 +1,357 @@
+//分類 icons
+//icon 64x64尺寸 list_details專用
+
+
+
+.icon {
+   &-listDetails {
+      border-radius: 50%;
+      background-color: $dk-blue;
+      width: 64px;
+      height: 64px;
+
+      &__salary {
+         background: url("../images/mini_white/icon_salary-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__allowance {
+         background: url("../images/mini_white/icon_allowance-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__transfer {
+         background: url("../images/mini_white/icon_transfer-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__interest {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__bonus {
+         background: url("../images/mini_white/icon_coin-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__rent {
+         background: url("../images/mini_white/icon_rent-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__cashReturn {
+         background: url("../images/mini_white/icon_cashback-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__invest {
+         background: url("../images/mini_white/icon_invest-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__fixDeposit {
+         background: url("../images/mini_white/icon_saving-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__cashBack {
+         background: url("../images/mini_white/icon_creditCard-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__moneyExchange {
+         background: url("../images/mini_white/icon_moneyExchange-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__loan {
+         background: url("../images/mini_white/icon_loan-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__insurance {
+         background: url("../images/mini_white/icon_insurance-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__pension {
+         background: url("../images/mini_white/icon_retire-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__cash {
+         background: url("../images/mini_white/icon_coin-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__prepay {
+         background: url("../images/mini_white/icon_prepay-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__gift {
+         background: url("../images/mini_white/icon_present-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__others {
+         background: url("../images/mini_white/icon_other-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__unDefine {
+         background: url("../images/mini_white/icon_unknow-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__dine {
+         background: url("../images/mini_white/icon_dine-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__cloth {
+         background: url("../images/mini_white/icon_cloth-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__living {
+         background: url("../images/mini_white/icon_sofa-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__rent__expense {
+         background: url("../images/mini_white/icon_rent-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__transport {
+         background: url("../images/mini_white/icon_car-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__education {
+         background: url("../images/mini_white/icon_education-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__entertainment {
+         background: url("../images/mini_white/icon_entertainment-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__shopping {
+         background: url("../images/mini_white/icon_shopping-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__creditCard {
+         background: url("../images/mini_white/icon_creditCard-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__transfer__expense {
+         background: url("../images/mini_white/icon_transfer-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__mobilePay__expense {
+         background: url("../images/mini_white/icon_mobilePay-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__invest__expense {
+         background: url("../images/mini_white/icon_invest-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__medical {
+         background: url("../images/mini_white/icon_medical-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__payCash {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__insurance__expense {
+         background: url("../images/mini_white/icon_FirstAidKit-w.svg")top left no-repeat;
+      }
+
+      &__fee {
+         background: url("../images/mini_white/icon_fee-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__others__expense {
+         background: url("../images/mini_white/icon_other-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__tax {
+         background: url("../images/mini_white/icon_tax-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__interest__expense {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__sport {
+         background: url("../images/mini_white/icon_sport-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__ccc {
+         background: url("../images/mini_white/icon_laptop-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__game {
+         background: url("../images/mini_white/icon_game-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__nursary {
+         background: url("../images/mini_white/icon_baby-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__pet {
+         background: url("../images/mini_white/icon_pets-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__beauty {
+         background: url("../images/mini_white/icon_beauty-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__loan {
+         background: url("../images/mini_white/icon_loan-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__donate {
+         background: url("../images/mini_white/icon_donation-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__present {
+         background: url("../images/mini_white/icon_present-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__parents {
+         background: url("../images/mini_white/icon_parents-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__cash__expense {
+         background: url("../images/mini_white/icon_coin-w.svg")top left no-repeat;
+      }
+
+      &__travel {
+         background: url("../images/mini_white/icon_travel-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__social {
+         background: url("../images/mini_white/icon_social-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__gift__expense {
+         background: url("../images/mini_white/icon_present-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__fixDeposit__expense {
+         background: url("../images/mini_white/icon_saving-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__moneyExchange__expense {
+         background: url("../images/mini_white/icon_moneyExchange-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+      &__unDefine__expense {
+         background: url("../images/mini_white/icon_unknow-w.svg")top left no-repeat;
+         background-size: 50%;
+         background-position: 50% 50%;
+      }
+
+   }
+
+}
+
+.income {
+   .icon {
+      &-listDetails {
+         background-color: $dk-blue  !important;
+      }
+   }
+}
+
+.expense {
+   .icon {
+      &-listDetails {
+         background-color: $red300  !important;
+      }
+   }
+}

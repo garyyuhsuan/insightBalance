@@ -1,0 +1,20 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+     link(rel="stylesheet" href="./css/master.css")
+
+
+//- main 區塊
+append main
+     .container-fluid.maxWidth-768.color-overlay.vh-100-footer
+          .wrapper
+               .modal-load
+                    include component/_loader.pug
+
+//- 單頁 Javascript
+append script

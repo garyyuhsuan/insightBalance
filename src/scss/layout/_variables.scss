@@ -1,0 +1,148 @@
+// break point
+$xs: 350px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Fonts
+$font-size-base: 16px !default;
+$font-size-xs: $font-size-base * 0.75 !default; // 12px
+$font-size-xs-1: $font-size-base * 0.8125 !default; // 13px
+$font-size-sm: $font-size-base * 0.875 !default; // 14px
+$font-size-md-4: $font-size-base * 1.0625 !default; // 17px
+$font-size-md: $font-size-base * 1.125 !default; // 18px
+$font-size-md-1: $font-size-base * 1.25 !default; // 20px
+$font-size-md-2: $font-size-base * 1.375 !default; // 22px
+$font-size-md-3: $font-size-base * 1.5 !default; // 24px
+$font-size-lg: $font-size-base * 1.625 !default; // 26px
+$font-size-lg-1: $font-size-base * 2 !default; // 32px
+$font-size-lg-2: $font-size-base * 2.125 !default; // 34px
+$font-size-lg-3: $font-size-base * 2.5 !default; // 40px
+
+// line-height
+$line-height-base: 1.4 !default;
+$line-height-md: $line-height-base * 1.2;
+$bold: 700 !default;
+
+$size-xs: 8px;
+$size-sm: 12px;
+$size-sm-1: 18px;
+$size-md: 24px;
+$size-md-1: 35px;
+$size-lg: 40px;
+$size-lg-1: 80px;
+
+// radius
+$radius-xs: 7px;
+$radius-sm: 13px;
+$radius-md: 16px;
+$radius-md-1: 19px;
+$radius-lg: 27px;
+
+// padding
+$pd-xxs: 5px;
+$pd-xs: 8px;
+$pd-ssm: 10px;
+$pd-sm: 16px;
+$pd-md: 20px;
+$pd-lg: 30px;
+$pd-lg-1: 40px;
+$pd-lg-2: 50px;
+$pd-lg-3: 60px;
+
+// margin
+$mg-xxs: 5px;
+$mg-xs: 8px;
+$mg-ssm: 10px;
+$mg-sm: 16px;
+$mg-md: 20px;
+$mg-lg: 30px;
+$mg-lg-1: 40px;
+$mg-lg-2: 60px;
+
+//-----Figma變數表-----
+// Primary
+$red900: #662525;
+$red700: #AB0208;
+$red500: #CF0209;
+$red400: #F00008;
+$red300: #E34848;
+$red200: #FFE1DF;
+$red100: #FFF3F3;
+$red50: #FEF9F9;
+
+// Gray
+$gray900: #242424;
+$gray700: #4A4A4A;
+$gray600: #707070;
+$gray500: #9C9C9C;
+$gray400: #C4C4C4;
+$gray300: #EDEDED;
+$gray200: #FAFAFA;
+$gray100: #FFFFFF;
+
+// Secondary
+$blue700: #004D99;
+$blue400: #0F6AC3;
+$blue200: #F4FAFF;
+
+// Success
+$green700: #0C9700;
+$green500: #04BA00;
+$green200: #D2F9CC;
+$green100: #EEFEEE;
+
+// Warning
+$yellow700: #B17500;
+$yellow500: #C79419;
+$yellow200: #FFF1CF;
+$yellow100: #FFF8E7;
+
+// Discount
+$orange700: #DF5000;
+$orange500: #F15D0A;
+$orange200: #FFE9DA;
+
+// Chart
+$blue: #1470CA;
+$blue-light: #50B0DA;
+$orange: #FF4F00;
+$yellow: #FFBA00;
+$purple: #A056BD;
+$pink: #F476A7;
+$green-light: #BAD72B;
+$gray: #DFDFDF;
+
+
+//-----colors 原本的變數-----
+
+$superRed: $red500;// $superRed: #CF0209
+$red: $red300;// $red:#E34848
+$pink-1: $red100;// $pink-1:#FFF3F3
+
+$primary: #9C9489;
+
+$teal: #8DC1CE;
+$teal-lighter: #d0dcdd;
+
+$light-blue: #F0FAFD;
+$dk-blue: #4686A5;
+$dk-blue2: $blue700;// $dk-blue2:#004D99
+
+$white: #FFF;
+$black: #000;
+$black-1: $gray900;// $black-1: #242424
+
+$gray-0: $gray400;// $gray-0:#c4c4c4
+$gray-1: $gray500;// $gray-1:#9c9c9c
+$gray-6: $gray700;// $gray-6:#4A4A4A
+$gray-9: $gray600;// $gray-9:#707070
+
+$background: $gray200;// $background:#fafafa
+
+$off-white: #F9F6F5;
+$off-white-0: $gray200;// $off-white-0:#FAFAFA
+$off-white-1: #FBFBFB;
+$off-white-2: $gray300;// $off-white-2:#EDEDED
+$off-white-3: #E6E6E6;

@@ -1,0 +1,25 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/master.css")
+
+
+//- main 區塊
+append main
+  .container-fluid
+    .wrapper
+      .main__status
+        .status 
+          img(src="./images/global/status_under_construction.svg", alt="") 
+          .status.status__description_heading 維護中 
+          .status.status__description 錯誤代碼 1234556                      
+          a(href="").btn_gotIt 我知道了
+
+//- 單頁 Javascript
+append script  
+

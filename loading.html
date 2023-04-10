@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:title" content="智慧收支帳本 - 永豐銀行">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="author" content="永豐銀行">
+    <meta name="copyright" content="永豐銀行">
+    <meta name="description" content="">
+    <title>智慧收支帳本 - 永豐銀行</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/layout/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+        <div class="container-fluid maxWidth-768">
+          <div class="header-content">  
+            <div class="flex-left icon-arrow-back"><img src="./images/global/icon_arrow_back.svg" alt="" onclick="history.back()">
+            </div>
+            <div class="flex-center text-center bold">智慧收支帳本</div>
+            <div class="flex-right icon-backtosinopac">
+            </div>
+          </div>
+        </div>
+    <div class="popup">
+      <div class="popup-overlay popup-toggle"> </div>
+      <div class="popup-wrapper popup-transition"> 
+        <div class="popup-header bold"><img src="./images/global/triangle_alert_red.svg" alt="" id="img_alert">
+          <div class="popup-heading">即將離開</div>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content">您即將離開智慧收支帳本，回到行動銀行</div>
+          <div class="btnSet__ex" id="btnSet-popup"><a class="popup-toggle">留下來</a><a class="primary popup-toggle">忍痛退出</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid maxWidth-768 color-overlay vh-100-footer">
+      <div class="wrapper">
+        <div class="modal-load">
+          <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle color-ex"></div>
+            <div class="sk-circle2 sk-circle color-ex"></div>
+            <div class="sk-circle3 sk-circle color-ex"></div>
+            <div class="sk-circle4 sk-circle color-ex"></div>
+            <div class="sk-circle5 sk-circle color-ex"></div>
+            <div class="sk-circle6 sk-circle color-ex"></div>
+            <div class="sk-circle7 sk-circle color-ex"></div>
+            <div class="sk-circle8 sk-circle color-ex"></div>
+            <div class="sk-circle9 sk-circle color-ex"></div>
+            <div class="sk-circle10 sk-circle color-ex"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vendor/jquery-3.6.0.min.securejs"></script>
+    <script src="./js/vendor/jquery-ui.min.securejs"></script>
+    <script src="./js/vendor/jquery.preload.min.securejs"></script>
+    <script src="./js/vendor/swiper-bundle.min.securejs"></script>
+    <script src="./js/global.securejs"></script>
+    <script>
+      $('.popup-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.popup').toggleClass('is-visible');
+        $('body').toggleClass('scroll-fixed');
+      
+      });
+    </script>
+  </body>
+</html>

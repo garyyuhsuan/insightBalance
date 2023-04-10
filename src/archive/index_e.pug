@@ -1,0 +1,972 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars 
+  - var data_header = {hasArrow: false, hasArrowHeader: true, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/jqpreloader_e.css")
+  link(rel="stylesheet" href="./css/index_e.css")          
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper.expense
+      .main
+        .searching-area 
+          .bold 收支手帳
+          .flex   
+            a(href="search_e.html").search-white-img
+              img(src="./images/global/icon_search_white.svg", alt="") 
+            a(href="filter_e.html").filter-img
+              img(src="./images/global/icon_filter.svg", alt="") 
+        
+        //- 時間區間篩選
+        include component/_tabs-time_e.pug
+        .balance-area
+          .flex-box
+            p 淨收支
+            a#info.info
+              img(src="./images/global/icon_info_white.svg", alt="")
+            #info_msg.balance-area-msg(style="display:none") 外幣折算規則 : 若有交易匯率，以原始交易匯率折算，否則以交易日日終匯率折算。
+          .bold $ 20,000
+      .pills-area
+        a(href="index.html").pill-income
+          span 
+          span 收入
+          span 141,200
+
+        a(href="index_e.html").pill-expenses.active
+          span 
+          span 支出
+          span 41,200
+
+      .round-shape 
+        #myHeader.header 
+          a#tab1.bold.active 分類
+          a#tab2.bold 明細
+
+      #content
+        #categories
+          .details__notice(style="margin: 10px 20px")            
+            div 包含「購物百貨」的搜尋結果如下
+            div  
+              a(href="") 清除搜尋
+              
+          .filter__group
+              a(href="").btn 金額自訂 
+                 img(src="./images/global/icon_close_white.svg")
+              a(href="").btn 帳務類別(4)
+                 img(src="./images/global/icon_close_white.svg")
+                
+          .categories 
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody
+                    tr
+                      td(rowspan="2")
+                        .earning__most  
+                        .iconM.iconM__dine                    
+                      td.bold 飲食
+                       span 花最多
+                      td 2 筆
+                    tr
+                      td 65%
+                      td -50,585
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__cloth
+                      td.bold 服飾
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__living
+                      td.bold 住家
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__rent__expense
+                      td.bold 租金
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__transport
+                      td.bold 交通
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__education
+                      td.bold 教育
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__entertainment
+                      td.bold 娛樂
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__shopping
+                      td.bold 購物百貨
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__creditCard
+                      td.bold 繳卡費
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__transfer__expense
+                      td.bold 帳號互轉
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423            
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__invest__expense
+                      td.bold 投資
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__fixDeposit__expense
+                      td.bold 定存
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__moneyExchange__expense
+                      td.bold 換匯
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__medical
+                      td.bold 醫療保健
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__sport
+                      td.bold 運動
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__ccc
+                      td.bold 3C
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__game
+                      td.bold 遊戲
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__nursary
+                      td.bold 育兒
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__pet
+                      td.bold 寵物
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423                    
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__beauty
+                      td.bold 美容保養
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__loan
+                      td.bold 貸款
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__tax
+                      td.bold 稅金
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__interest__expense
+                      td.bold 利息
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__fee
+                      td.bold 費用
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__insurance__expense
+                      td.bold 保險
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__donate
+                      td.bold 捐款
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423            
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__parents
+                      td.bold 孝親費
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__cash__expense
+                      td.bold 零用金
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__travel
+                      td.bold 旅遊
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__social
+                      td.bold 交際
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__gift__expense
+                      td.bold 贈與
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__others__expense
+                      td.bold 其他
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423
+            li 
+              a(href="category_details_e.html")
+                table.category 
+                  tbody 
+                    tr
+                      td(rowspan="2") 
+                        .iconM.iconM__unDefine__expense
+                      td.bold 這筆是啥
+                      td 10 筆
+                    tr
+                      td 15%
+                      td -8,423                     
+
+            .gotop#gotop(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })") 
+            .total__summary#totalSummary 
+              a(href="index.html")  看收入
+              a  
+                span 總金額
+                span 1,455,445 
+
+
+        #details(style="display:none;")
+          .details__notice       
+            div 包含「收入」的搜尋結果如下
+            div  
+              a(href="") 清除搜尋
+          .filter__group 
+              a(href="").btn 金額自訂 
+                 img(src="./images/global/icon_close_white.svg")
+              a(href="").btn 帳務類別(4)
+                 img(src="./images/global/icon_close_white.svg")
+          
+          .sort__number#sorting
+            span  共189筆             
+            a(href="#myModal").icon__sorting.popup_toggle                 
+              
+          .details
+            .heading__date 2022年3月
+
+            ul.list
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__dine 飲食
+                    .list__content Ｗ Ｈotel情人節大餐
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22 
+                    .list__account 營業部DAWHO活期儲蓄存款
+              
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__unDefine 這筆是啥
+                    .list__content 股票款3034-聯詠9股票款3034-聯詠9
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList.exclude 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__cloth 服飾
+                    .list__content Zara大直店服飾
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__living 住家
+                    .list__content 第四台有線電視
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__rent_expense 租金
+                    .list__content 大直小窩房租
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__transport 交通
+                    .list__content 捷運通勤
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__education 教育
+                    .list__content 吉德堡美語家教
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__entertainment 娛樂
+                    .list__content 黑美人大酒家
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__shopping 購物百貨
+                    .list__content 康是美日常用品
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__creditCard 繳卡費  
+                    .list__content 中信信用卡費
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__transfer__expense 帳號互轉
+                    .list__content 周轉金
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__invest__expense 投資
+                    .list__content 股票款3034-聯詠9股票款3034-聯詠9
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__fixDeposit__expense 定存
+                    .list__content 三月份定存
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__moneyExchange__expense 換匯
+                    .list__content 美金換匯
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__medical 醫療保健 
+                    .list__content 膝蓋護具器材
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__sport 運動
+                    .list__content 健身房月費
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__ccc 3C
+                    .list__content 除濕機購買
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__game 遊戲
+                    .list__content 大富翁手遊儲值金
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__nursary 育兒
+                    .list__content 康橋幼稚園安親班
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__pet 寵物
+                    .list__content 胖吉Costco飼料
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款                    
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__beauty 美容
+                    .list__content 皮秒雷射換膚
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__loan 貸款
+                    .list__content 寶來花園富邦貸款
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__tax 稅金
+                    .list__content 地價稅
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__fee 費用
+                    .list__content 國民年金
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__insurance__expense 保險
+                    .list__content 國泰人壽保費
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__donate 捐款
+                    .list__content 慈濟基金會月捐
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__interest__expense 利息
+                    .list__content 利息支出
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款                   
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__parents 孝親費
+                    .list__content 父母孝親費
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__cash__expense 零用金
+                    .list__content 零用金支出
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__travel 旅遊
+                    .list__content 泰國機加酒旅費
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__social 交際
+                    .list__content 錢櫃ＫＴＶ唱歌
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__gift__expense 贈與
+                    .list__content 資產移轉贈與
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              li.pull_keep
+                a(href="list_details_e.html")
+                 .flxList 
+                  .flxList__line1 
+                    .list__pill 
+                      .pills__others__expense 其他
+                    .list__content 股票款3034-聯詠9股票款3034-聯詠9
+                    .list__amount -100,000 
+                  .flxList__line2
+                    .list__date 2022/03/22
+                    .list__account 營業部DAWHO活期儲蓄存款
+              
+                            
+            .heading__date 2022年2月
+            ul.list
+              li.pull_keep
+                  a(href="list_details_e.html")
+                  .flxList 
+                    .flxList__line1 
+                      .list__pill 
+                        .pills__others__expense 其他
+                      .list__content 股票款3034-聯詠9股票款3034-聯詠9
+                      .list__amount -100,000 
+                    .flxList__line2
+                      .list__date 2022/03/22
+                      .list__account 營業部DAWHO活期儲蓄存款
+            //-提示 - 觸發載入更多
+            include component/_loader-mini_e.pug
+
+            //-提示 - 已經到底
+            ul.list
+              li 
+                .flxList__end
+
+            //- .gotop#gotop(onclick="topFunction()") 
+            .gotop#gotop2(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })") 
+            .total__summary#totalSummary2 
+              a(href="index.html")  看收入
+              a  
+                span 總金額
+                span 1,455,445 
+
+        //-提示訊息
+        .message_board#msg_board 
+          table.msg 
+            tbody 
+              tr 
+                td(rowspan="2" style="width:30%;text-align:center") 
+                  img(src="./images/global/update_checkMark.svg", alt="資料更新")
+                td 資料更新時間如下：
+              tr 
+                td.duration 銀行：2022 年 3 月 20 日<br>信用卡：2022 年 3 月 20 日
+
+    .popup2#myModal
+      .content
+        .content-title
+          h3 選擇排序
+          a(href="") 取消
+        ul.sorting 
+          li 
+            a(href="").active 金額由大到小
+          li
+            a(href="") 金額由小到大 
+          li
+            a(href="") 時間由近至遠
+          li
+            a(href="") 時間由遠至近  
+            
+    .popup2#myModal1
+      form(action="") 
+        .content
+          h3 其他日期
+
+          .dateFilter__content
+            .c-radio#custom60.active 近60天
+            .c-radio#custom90 近90天
+            .c-radio#customAll 全部
+            .c-radio#customDuration 自訂
+            //- .c-radio#custom60 
+            //-   input(type="radio" name="dateFilter" checked)#radio_01.radio__input
+            //-   label(for="radio_01").radio__pill 近60天
+            //- .c-radio#custom90  
+            //-   input(type="radio" name="dateFilter")#radio_02.radio__input
+            //-   label(for="radio_02").radio__pill 近90天
+            //- .c-radio#customAll  
+            //-   input(type="radio" name="dateFilter")#radio_03.radio__input
+            //-   label(for="radio_03").radio__pill 全部
+            //- .c-radio#customDuration 
+            //-   input(type="radio" name="dateFilter" )#radio_04.radio__input
+            //-   label(for="radio_04").radio__pill 自訂
+          
+          div#customDurationInput(style="display:none")
+            h3 自訂
+            .filter__date-container
+              input#date-input-start.filter__date(type='text' onclick='event.preventDefault()' required='' readonly="true")
+              .date-dash
+              input#date-input-end.filter__date(type='text' onclick='event.preventDefault()' required='' readonly="true")
+            p#warningText
+
+          .btnSet__red#btn-wrap 
+            a#cancelBtn 取消
+            a.primary#submitBtn 確定
+      #scrollBlock
+        .date-selector-header
+          
+          .date-title
+            p#date-title 標題
+          #date-ok
+            p 完成
+        .date-selector-title
+          div
+            p 年
+          div 
+            p 月
+          div 
+            p 日
+        .date-selector
+          #year1.year
+          #month1.month
+          #day1.day  
+
+//- 單頁 Javascript
+append script  
+  script(src="./js/vendor/custom-select.securejs")
+  script(src="./js/vendor/jquery.preload.min.securejs")
+  script(src="./js/vendor/pullkeep.securejs")  
+  script(src="./js/index.securejs") 
+  script(type='text/javascript' src='./src/js/scrollDate.js')

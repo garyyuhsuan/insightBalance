@@ -1,0 +1,135 @@
+//select toggle effects - account
+
+$("#selectAcc").click(function(){
+    $('#labelAllAccount').toggleClass("labelHighlight");
+    $("#account_details").toggle();
+    $('.checkItem').prop('checked', false); // Unchecks it
+
+ });
+
+//select toggle effects - credit card
+
+$("#selectCredit").click(function(){
+    $('#labelAllCredit').toggleClass("labelHighlight");
+    $("#account_credit_card_details").toggle();
+    $('.checkItem').prop('checked', false); // Unchecks it
+
+ });
+
+//shortcut item - toggle selection
+$(".button__amount--in").click(function(){
+      $(this).toggleClass("active");
+      $(this).siblings().removeClass("active");
+  });
+
+
+//slider 2
+
+window.onload = function(){
+    fillColor();
+    slideOne();
+    slideTwo();
+}
+
+let maxAmountRaw = 2456789;
+let maxAmountRound =  (Number(String(maxAmountRaw)[0]) + 1) * Math.pow(10, String(maxAmountRaw).length - 1) ;
+
+let sliderBtnWidth = 18;
+let sliderWidth = document.querySelector(".slider__track--in").clientWidth;
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let lowerLimit = document.getElementById("lowerLimit");
+let upperLimit = document.getElementById("upperLimit");
+// let displayValOne = document.getElementById("range1");
+// let displayValTwo = document.getElementById("range2");
+let minGap = maxAmountRound*sliderBtnWidth/sliderWidth;
+let sliderTrackIn = document.querySelector(".slider__track--in");
+let sliderMaxValue = document.getElementById("slider-1").max;
+let allShortCutItem = Array.from(document.getElementsByClassName('shortcut__item'));
+
+
+
+
+function slideOne(){
+    
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    // displayValOne.textContent = sliderOne.value;
+    lowerLimit.value = sliderOne.value;
+    removefilled();
+    fillColor();
+}
+function slideOnelimit(){
+     if(lowerLimit.value!=""){
+    sliderOne.value = lowerLimit.value;
+    slideOne();}
+}
+
+function slideTwo(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    // displayValTwo.textContent = sliderTwo.value;
+    upperLimit.value = sliderTwo.value;
+    removefilled();
+    fillColor();
+}
+
+function slideTwolimit(){
+     if(upperLimit.value!=""){
+    sliderTwo.value = upperLimit.value;  
+    slideTwo();
+    }
+}
+
+function fillColor(){
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrackIn.style.background = `linear-gradient(to right, #E6E6E6 ${percent1}% , #aecbcd ${percent1}% , #aecbcd ${percent2}%, #E6E6E6 ${percent2}%)`;
+}
+
+// 如果數值有改動 500+按鈕就會恢復
+
+
+function removefilled(){
+
+    allShortCutItem.forEach(box => {
+    
+        box.classList.remove('item_toggled');
+      });
+
+}
+
+
+//500+系列按鈕
+
+document.getElementById("m500up").onclick = function() {m500();};
+
+function m500() {
+ 
+    sliderOne.value=500;
+    sliderTwo.value=maxAmountRound;
+    slideOne();
+    slideTwo();
+}
+
+document.getElementById("m5000up").onclick = function() {m5000();};
+
+function m5000() {
+
+    sliderOne.value=5000;
+    sliderTwo.value=maxAmountRound;
+    slideOne();
+    slideTwo();
+}
+
+document.getElementById("m10000up").onclick = function() {m10000();};
+
+function m10000() {
+    sliderOne.value=10000;
+    sliderTwo.value=maxAmountRound;
+    slideOne();
+    slideTwo();
+}
+

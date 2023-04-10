@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:title" content="智慧收支帳本 - 永豐銀行">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="author" content="永豐銀行">
+    <meta name="copyright" content="永豐銀行">
+    <meta name="description" content="">
+    <title>智慧收支帳本 - 永豐銀行</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/layout/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+        <div class="container-fluid maxWidth-768">
+          <div class="header-content">  
+            <div class="flex-left icon-arrow-back"><img class="popup-toggle" src="./images/global/icon_arrow_back.svg" alt="">
+            </div>
+            <div class="flex-center text-center bold">智慧收支帳本</div>
+            <div class="flex-right icon-backtosinopac">
+            </div>
+          </div>
+        </div>
+    <div class="popup">
+      <div class="popup-overlay popup-toggle"> </div>
+      <div class="popup-wrapper popup-transition"> 
+        <div class="popup-header bold"><img src="./images/global/triangle_alert_red.svg" alt="" id="img_alert">
+          <div class="popup-heading">即將離開</div>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content">您即將離開智慧收支帳本，回到行動銀行</div>
+          <div class="btnSet__ex" id="btnSet-popup"><a class="popup-toggle">留下來</a><a class="primary popup-toggle">忍痛退出</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid maxWidth-768">
+      <div class="wrapper expense"> 
+        <div class="main">
+          <div class="searching-area">
+            <div class="bold">收支手帳</div>
+            <div class="flex-box">  <a class="search-white-img" href="search.html"><img src="./images/global/icon_search_white.svg" alt=""></a><a class="filter-img" href="filter_ex.html"><img src="./images/global/icon_filter.svg" alt=""></a></div>
+          </div>
+          <div class="duration-expense ease" id="timeSwitch">
+            <input type="radio" id="byWeek" name="time-tabs"><span class="ease">週</span>
+            <input type="radio" id="byMonth" name="time-tabs" checked="checked"><span class="ease">月</span>
+            <input type="radio" id="byYear" name="time-tabs"><span class="ease">年</span>
+            <input type="radio" id="byOther" name="time-tabs"><span class="ease">其他</span>
+            <div class="pill-bg ease"></div>
+            <div class="swiper-week" id="swiperWeek">
+              <div class="duration-swiper">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""> 2022/6/13~6/19</a></div>
+                    <div class="swiper-slide"><a href=""> 2022/6/20~6/26</a></div>
+                    <div class="swiper-slide"><a href=""> 2022/6/27~7/3</a></div>
+                    <div class="swiper-slide"><a href=""> 2022/7/4~7/10</a></div>
+                    <div class="swiper-slide"><a href=""> 2022/7/11~7/17</a></div>
+                    <div class="swiper-slide"><a href=""> 2022/7/18~7/24</a></div>
+                  </div>
+                </div>
+                <div class="swiper-tool">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-month" id="swiperMonth">
+              <div class="duration-swiper">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""> 2022年2月</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年3月</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年4月</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年5月</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年6月</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年7月</a></div>
+                  </div>
+                </div>
+                <div class="swiper-tool">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-year" id="swiperYear">
+              <div class="duration-swiper">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""> 2017年</a></div>
+                    <div class="swiper-slide"><a href=""> 2018年</a></div>
+                    <div class="swiper-slide"><a href=""> 2019年</a></div>
+                    <div class="swiper-slide"><a href=""> 2020年</a></div>
+                    <div class="swiper-slide"><a href=""> 2021年</a></div>
+                    <div class="swiper-slide"><a href=""> 2022年</a></div>
+                  </div>
+                </div>
+                <div class="swiper-tool">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"> </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-other" id="swiperOthers">
+              <div class="search__others"> 
+                <div class="date__edit">2022/7/1~2022/7/31</div><a class="popup_toggle" href="#myModal1"> <img src="./images/global/icon_edit.svg"></a>
+              </div>
+            </div>
+          </div>
+          <div class="balance-area">
+            <div class="flex-box">
+              <p>淨收支</p><a class="info" id="info"><img src="./images/global/icon_info_white.svg" alt=""></a>
+              <div class="balance-area-msg" id="info_msg" style="display:none">外幣折算規則 : 若有交易匯率，以原始交易匯率折算，否則以交易日日終匯率折算。</div>
+            </div>
+            <div class="bold">20,000</div>
+          </div>
+        </div>
+        <div class="pills-area"><a class="pill-income" href="#"><span> </span><span>收入</span><span>141,200</span></a><a class="pill-expenses active" href="#"><span> </span><span>支出</span><span>41,200</span></a></div>
+        <div class="round-shape"> 
+          <div class="header" id="myHeader"> <a class="bold color-ex" id="tab1">分類</a><a class="bold color-ex inactive" id="tab2">明細</a></div>
+        </div>
+        <div id="content">
+          <div id="categories">
+            <div class="details__notice">           
+              <div class="details__notice--text">包含「薪資」的搜尋結果如下</div><a href="">清除搜尋  </a>
+            </div>
+            <div class="filter__group"><a class="btn" href="">金額自訂 <img src="./images/global/icon_close_white.svg"></a><a class="btn" href="">帳務類別(4)<img src="./images/global/icon_close_white.svg"></a></div>
+            <div class="categories">
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="earning__most"> </div>
+                      <div class="icon-cat icon-cat__salary"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">薪資 </div>
+                        <div class="category__label color-ex" id="topLabel">花最多</div>
+                        <div class="category__num">134562 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__transfer"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">帳戶互轉</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__interest"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">利息</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__bonus"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">獎金</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__rent"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">租金</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__cashReturn"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">退款</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__invest"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">投資</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__fixDeposit"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">定存</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__cashBack"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">現金回饋</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__moneyExchange"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">換匯</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__loanIncome"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">貸款</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__insurance"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">保險</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__pension"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">退休金</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__cash"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">零用金</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__prepay"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">代墊款</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__gift"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">贈與</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__allowance"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">補助</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085</div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__others"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">其他</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085        </div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <li> <a href="category_details_ex.html">
+                  <div class="category">
+                    <div class="category__flxCol1">
+                      <div class="icon-cat icon-cat__unDefine"></div>
+                    </div>
+                    <div class="category__flxCol2">
+                      <div class="category__flxRow1">
+                        <div class="category__name">這筆是啥</div>
+                        <div class="category__num">123454113 筆</div>
+                      </div>
+                      <div class="category__flxRow2">
+                        <div class="category__percent">65%</div>
+                        <div class="category__amount amount-style color-ex">50,500,000,085  </div>
+                      </div>
+                    </div>
+                  </div></a></li>
+              <div class="gotop" id="gotop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">          </div>
+              <div class="total__summary" id="totalSummary"><a href="#"> 看收入</a><a class="float-btn style-ex"><span>總金額</span><span class="float-btn-amount color-ex">1,455,445 </span></a></div>
+            </div>
+          </div>
+          <div id="details" style="display:none;">
+            <div class="details__notice">           
+              <div class="details__notice--text">包含「薪資」的搜尋結果如下</div><a href="">清除搜尋</a>
+            </div>
+            <div class="filter__group"> <a class="btn" href="">金額自訂 <img src="./images/global/icon_close_white.svg"></a><a class="btn" href="">帳務類別(4)<img src="./images/global/icon_close_white.svg"></a></div>
+            <div class="sort__number" id="sorting"> <span> 共189筆             </span><a class="icon__sorting popup_toggle" href="#myModal"></a></div>
+            <div class="details">
+              <div class="heading__date">2022年3月</div>
+              <ul class="list">
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__salary">薪資</span></div>
+                        <div class="list__content">2月份薪資</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22 </div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill unkwon-detail"> <span class="pills pills__unDefine">這筆是啥</span></div>
+                        <div class="list__content">股票款3034-聯詠9股票款3034-聯詠9</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList exclude"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__transfer">帳號互轉</span></div>
+                        <div class="list__content">換匯款項</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__interest">利息</span></div>
+                        <div class="list__content">股票利息3034-聯詠9股票款3034-聯詠9</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__bonus">獎金</span></div>
+                        <div class="list__content">2月份獎金</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__rent">租金</span></div>
+                        <div class="list__content">大直小窩租金</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__cashBack">現金回饋</span></div>
+                        <div class="list__content">Cashback現金回饋</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__cashReturn">退款</span></div>
+                        <div class="list__content">永豐信用卡費</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__invest">投資</span></div>
+                        <div class="list__content">投資信託</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款      </div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__fixDeposit">定存</span></div>
+                        <div class="list__content">３月份定存</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__moneyExchange">換匯</span></div>
+                        <div class="list__content">美金兌換</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__loanIncome">貸款</span></div>
+                        <div class="list__content">富邦信貸</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__insurance">保險</span></div>
+                        <div class="list__content">南山人壽儲蓄險</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__pension">退休金</span></div>
+                        <div class="list__content">退休金３月</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__cash">零用金</span></div>
+                        <div class="list__content">零用金餘額</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__prepay">代墊款</span></div>
+                        <div class="list__content">聚餐代墊款</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__gift">贈與</span></div>
+                        <div class="list__content">父母節稅贈與</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__allowance">補助</span></div>
+                        <div class="list__content">選舉補助</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__others">其他</span></div>
+                        <div class="list__content">股票款3034-聯詠9股票款3034-聯詠9</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22</div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+              </ul>
+              <div class="heading__date">2022年2月</div>
+              <ul class="list">
+                <li class="pull_keep"><a href="list_details_ex.html">
+                    <div class="flxList"> 
+                      <div class="flxList__line1"> 
+                        <div class="list__pill"> <span class="pills pills__salary">薪資</span></div>
+                        <div class="list__content">２月份薪資</div>
+                        <div class="list__amount amount-style color-ex">100,000 </div>
+                      </div>
+                      <div class="flxList__line2">
+                        <div class="list__date">2022/03/22 </div>
+                        <div class="list__account">營業部DAWHO活期儲蓄存款</div>
+                      </div>
+                    </div></a></li>
+              </ul>
+              <div class="sk-fading-circle mini-loader">
+                <div class="sk-circle1 sk-circle color-ex"></div>
+                <div class="sk-circle2 sk-circle color-ex"></div>
+                <div class="sk-circle3 sk-circle color-ex"></div>
+                <div class="sk-circle4 sk-circle color-ex"></div>
+                <div class="sk-circle5 sk-circle color-ex"></div>
+                <div class="sk-circle6 sk-circle color-ex"></div>
+                <div class="sk-circle7 sk-circle color-ex"></div>
+                <div class="sk-circle8 sk-circle color-ex"></div>
+                <div class="sk-circle9 sk-circle color-ex"></div>
+                <div class="sk-circle10 sk-circle color-ex"></div>
+              </div>
+              <ul class="list">
+                <li> 
+                  <div class="flxList__end"></div>
+                </li>
+              </ul>
+              <div class="gotop" id="gotop2" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"> </div>
+              <div class="total__summary" id="totalSummary2"> <a href="#"> 看收入</a><a class="float-btn style-ex"><span>總金額</span><span class="float-btn-amount color-ex">1,455,445 </span></a></div>
+            </div>
+          </div>
+          <div class="message_board" id="msg_board">
+            <table class="msg"> 
+              <tbody> 
+                <tr> 
+                  <td rowspan="2" style="width:30%;text-align:center"> <img src="./images/global/update_checkMark.svg" alt="資料更新"></td>
+                  <td>資料更新時間如下：</td>
+                </tr>
+                <tr> 
+                  <td class="duration">銀行：2022 年 3 月 20 日<br>信用卡：2022 年 3 月 20 日</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="popup2" id="myModal">
+        <div class="content">
+          <div class="content-title">
+            <h3>選擇排序</h3><a href="">取消</a>
+          </div>
+          <ul class="sorting"> 
+            <li> <a class="active" href="">金額由大到小</a></li>
+            <li><a href="">金額由小到大 </a></li>
+            <li><a href="">時間由近至遠</a></li>
+            <li><a href="">時間由遠至近  </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup2" id="myModal1">
+        <form action=""> 
+          <div class="content">
+            <h3>其他日期</h3>
+            <div id="dateFilter__content_ex">
+              <div class="c-radio custom60 active">近60天</div>
+              <div class="c-radio custom90">近90天</div>
+              <div class="c-radio customAll">全部</div>
+              <div class="c-radio customDuration">自訂</div>
+            </div>
+            <div id="dateFilter__content_in" style="display:none">
+              <div class="c-radio custom60 active">近60天</div>
+              <div class="c-radio custom90">近90天</div>
+              <div class="c-radio customAll">全部</div>
+              <div class="c-radio customDuration">自訂    </div>
+            </div>
+            <div class="customDurationInput" style="display:none">
+              <h3>自訂</h3>
+              <div class="filter__date-container">
+                <input class="filter__date" id="date-input-start" type="text" onclick="event.preventDefault()" required="" readonly="true">
+                <div class="date-dash"></div>
+                <input class="filter__date" id="date-input-end" type="text" onclick="event.preventDefault()" required="" readonly="true">
+              </div>
+              <p id="warningText"></p>
+            </div>
+            <div class="btnSet__ex" id="btn-wrap"><a id="cancelBtn">取消</a><a class="primary" id="submitBtn">確定</a></div>
+          </div>
+        </form>
+        <div id="scrollBlock">
+          <div class="date-selector-header">
+            <div class="date-title">
+              <p id="date-title">標題</p>
+            </div>
+            <div id="date-ok">
+              <p>完成</p>
+            </div>
+          </div>
+          <div class="date-selector-title">
+            <div>
+              <p>年</p>
+            </div>
+            <div> 
+              <p>月</p>
+            </div>
+            <div> 
+              <p>日</p>
+            </div>
+          </div>
+          <div class="date-selector">
+            <div class="year" id="year1"></div>
+            <div class="month" id="month1"></div>
+            <div class="day" id="day1"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vendor/jquery-3.6.0.min.securejs"></script>
+    <script src="./js/vendor/jquery-ui.min.securejs"></script>
+    <script src="./js/vendor/jquery.preload.min.securejs"></script>
+    <script src="./js/vendor/swiper-bundle.min.securejs"></script>
+    <script src="./js/global.securejs"></script>
+    <script>
+      $('.popup-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.popup').toggleClass('is-visible');
+        $('body').toggleClass('scroll-fixed');
+      
+      });
+    </script>
+    <script src="./js/vendor/pullkeep.js"> </script>
+    <script src="./js/index.js"> </script>
+    <script src="./js/scrollDate.js"></script>
+    <script src="./js/switchEXIN.js"> </script>
+  </body>
+</html>

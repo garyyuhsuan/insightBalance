@@ -1,0 +1,139 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style  
+  link(rel="stylesheet" href="./css/master.css")
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper.expense
+      .main.main__pd-sm
+        .category__wrap
+          .category__title 編輯分類
+          .category__inner
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__dine
+                .category__txt 飲食
+              a(href="").category__col
+                .icon-editCat.icon-editCat__cloth
+                .category__txt 服飾
+              a(href="").category__col
+                .icon-editCat.icon-editCat__living
+                .category__txt 住家
+              a(href="").category__col
+                .icon-editCat.icon-editCat__rent
+                .category__txt 租金 
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__transport
+                .category__txt 交通
+              a(href="").category__col
+                .icon-editCat.icon-editCat__education
+                .category__txt 教育
+              a(href="").category__col
+                .icon-editCat.icon-editCat__entertainment
+                .category__txt 娛樂
+              a(href="").category__col
+                .icon-editCat.icon-editCat__shopping.active
+                .category__txt 購物百貨
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__creditCard
+                .category__txt 繳卡費  
+              a(href="").category__col
+                .icon-editCat.icon-editCat__transfer
+                .category__txt 帳號互轉          
+              a(href="").category__col
+                .icon-editCat.icon-editCat__invest
+                .category__txt 投資
+              a(href="").category__col
+                .icon-editCat.icon-editCat__fixDeposit
+                .category__txt 定存
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__moneyExchange
+                .category__txt 換匯
+              a(href="").category__col
+                .icon-editCat.icon-editCat__medical
+                .category__txt 醫療保健 
+              a(href="").category__col
+                .icon-editCat.icon-editCat__sport
+                .category__txt 運動
+              a(href="").category__col
+                .icon-editCat.icon-editCat__ccc
+                .category__txt 3C          
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__game
+                .category__txt 遊戲
+              a(href="").category__col
+                .icon-editCat.icon-editCat__nursary
+                .category__txt 育兒
+              a(href="").category__col
+                .icon-editCat.icon-editCat__pet
+                .category__txt 寵物          
+              a(href="").category__col
+                .icon-editCat.icon-editCat__beauty
+                .category__txt 美容保養
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__loan
+                .category__txt 貸款
+              a(href="").category__col
+                .icon-editCat.icon-editCat__tax
+                .category__txt 稅金
+              a(href="").category__col
+                .icon-editCat.icon-editCat__fee
+                .category__txt 費用/手續費
+              a(href="").category__col
+                .icon-editCat.icon-editCat__insurance
+                .category__txt 保險            
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__donate
+                .category__txt 捐款
+              a(href="").category__col
+                .icon-editCat.icon-editCat__interest
+                .category__txt 利息         
+              a(href="").category__col
+                .icon-editCat.icon-editCat__parents
+                .category__txt 孝親費
+              a(href="").category__col
+                .icon-editCat.icon-editCat__cash
+                .category__txt 零用金
+            .category__row
+              a(href="").category__col
+                .icon-editCat.icon-editCat__travel
+                .category__txt 旅遊
+              a(href="").category__col
+                .icon-editCat.icon-editCat__social
+                .category__txt 交際
+              a(href="").category__col
+                .icon-editCat.icon-editCat__gift
+                .category__txt 贈與
+              a(href="").category__col
+                .icon-editCat.icon-editCat__others
+                .category__txt 其他 
+          .category__more 
+            p.show-more 查看更多
+
+        .buttonSet__red
+          a(href="list_details_ex.html")  取消
+          a(href="").primary 套用             
+
+
+//- 單頁 Javascript
+append script
+  script.
+    $(document).ready(function () {
+      $('.show-more').on('click' , function (e) {
+        $('.category__inner').toggleClass('show'); 
+        $('.show-more').hide();
+      });
+    });

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:title" content="智慧收支帳本 - 永豐銀行">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="author" content="永豐銀行">
+    <meta name="copyright" content="永豐銀行">
+    <meta name="description" content="">
+    <title>智慧收支帳本 - 永豐銀行</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/layout/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+        <div class="container-fluid maxWidth-768">
+          <div class="header-content">  
+            <div class="flex-left icon-arrow-back"><img src="./images/global/icon_arrow_back.svg" alt="" onclick="history.back()">
+            </div>
+            <div class="flex-center text-center bold">智慧收支帳本</div>
+            <div class="flex-right icon-backtosinopac">
+            </div>
+          </div>
+        </div>
+    <div class="popup">
+      <div class="popup-overlay popup-toggle"> </div>
+      <div class="popup-wrapper popup-transition"> 
+        <div class="popup-header bold"><img src="./images/global/triangle_alert_red.svg" alt="" id="img_alert">
+          <div class="popup-heading">即將離開</div>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content">您即將離開智慧收支帳本，回到行動銀行</div>
+          <div class="btnSet__ex" id="btnSet-popup"><a class="popup-toggle">留下來</a><a class="primary popup-toggle">忍痛退出</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid maxWidth-768">
+      <div class="wrapper">
+        <div class="main__search">
+          <form action="">
+            <div class="search__inputArea"><span>
+                <div class="flex-between">
+                  <div class="flex-left flex-full">
+                    <input class="search" id="searchInput" type="text" onfocus="showKeywords()" onblur="hideKeywords()" onkeyup="startSearchFilter()" name="keyWord" placeholder="請輸入關鍵字/標籤"><img class="clear-search-icon js-clearSearchBox" src="./images/global/icon_clearSearch.svg" alt="刪除搜尋紀錄" style="opacity: 0;">
+                  </div><a class="cancel-btn-icon" href="index.html" style="margin-right:unset">返回</a>
+                </div></span></div>
+          </form>
+          <div class="search-result__content" id="searchTyped" style="display:none">
+            <div class="search-result__list">
+              <div class="search-result__row">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡"><a href="#">aaa</a></div>
+              </div>
+              <div class="search-result__row">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡"><a href="#">bbb</a></div>
+              </div>
+              <div class="search-result__row">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡"><a href="#">cc</a></div>
+              </div>
+              <div class="search-result__row">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡"><a href="#">cacdc</a></div>
+              </div>
+              <div class="search-result__row">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡"><a href="#">ccc</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="search-result__content" id="searchDefault">
+            <div class="search-result__title flex-between">
+              <div class="title bold">歷史搜尋</div><a class="search_lists" id="delete" href=""> <img src="./images/global/icon_trash_can.svg" alt="刪除"></a>
+            </div>
+            <div class="content text-center" id="noSearchResult" style="display:none"> - 近期沒有搜尋紀錄 - </div>
+            <div class="search-result__list search_lists">
+              <div class="search-result__row flex-between">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡">
+                  <div>股票</div>
+                </div>
+                <div class="delete-btn"><a href="#"><img class="delete-img" src="./images/global/icon_close_gray.svg"></a></div>
+              </div>
+              <div class="search-result__row flex-between">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡">
+                  <div>電話費</div>
+                </div>
+                <div class="flex-right delete-btn"><a href="#"><img class="delete-img" src="./images/global/icon_close_gray.svg"></a></div>
+              </div>
+              <div class="search-result__row flex-between">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡">
+                  <div>房租</div>
+                </div>
+                <div class="flex-right delete-btn"><a href="#"><img class="delete-img" src="./images/global/icon_close_gray.svg"></a></div>
+              </div>
+              <div class="search-result__row flex-between">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡">
+                  <div>交通</div>
+                </div>
+                <div class="flex-right delete-btn"><a href="#"><img class="delete-img" src="./images/global/icon_close_gray.svg"></a></div>
+              </div>
+              <div class="search-result__row flex-between">
+                <div class="flex-left flex-full"><img class="search-img" src="./images/global/icon_search.svg" alt="放大鏡">
+                  <div>電話費</div>
+                </div>
+                <div class="flex-right delete-btn"><a href="#"><img class="delete-img" src="./images/global/icon_close_gray.svg"></a></div>
+              </div>
+            </div>
+            <div class="search-trend__title">熱門搜尋 </div>
+            <div class="keyWords__btn">私房錢 Plus</div>
+            <div class="keyWords__btn">女人家</div>
+            <div class="keyWords__btn">換匯優利</div>
+            <div class="keyWords__btn">DAWHO</div>
+            <div class="keyWords__btn">iBrAin</div>
+            <div class="keyWords__btn">信用卡</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vendor/jquery-3.6.0.min.securejs"></script>
+    <script src="./js/vendor/jquery-ui.min.securejs"></script>
+    <script src="./js/vendor/jquery.preload.min.securejs"></script>
+    <script src="./js/vendor/swiper-bundle.min.securejs"></script>
+    <script src="./js/global.securejs"></script>
+    <script>
+      $('.popup-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.popup').toggleClass('is-visible');
+        $('body').toggleClass('scroll-fixed');
+      
+      });
+    </script>
+    <script src="./js/search.securejs"></script>
+  </body>
+</html>

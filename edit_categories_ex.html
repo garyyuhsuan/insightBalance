@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta property="og:title" content="智慧收支帳本 - 永豐銀行">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta name="author" content="永豐銀行">
+    <meta name="copyright" content="永豐銀行">
+    <meta name="description" content="">
+    <title>智慧收支帳本 - 永豐銀行</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/layout/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body>
+        <div class="container-fluid maxWidth-768">
+          <div class="header-content">  
+            <div class="flex-left icon-arrow-back"><img src="./images/global/icon_arrow_back.svg" alt="" onclick="history.back()">
+            </div>
+            <div class="flex-center text-center bold">智慧收支帳本</div>
+            <div class="flex-right icon-backtosinopac">
+            </div>
+          </div>
+        </div>
+    <div class="popup">
+      <div class="popup-overlay popup-toggle"> </div>
+      <div class="popup-wrapper popup-transition"> 
+        <div class="popup-header bold"><img src="./images/global/triangle_alert_red.svg" alt="" id="img_alert">
+          <div class="popup-heading">即將離開</div>
+        </div>
+        <div class="popup-body">
+          <div class="popup-content">您即將離開智慧收支帳本，回到行動銀行</div>
+          <div class="btnSet__ex" id="btnSet-popup"><a class="popup-toggle">留下來</a><a class="primary popup-toggle">忍痛退出</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid maxWidth-768">
+      <div class="wrapper expense">
+        <div class="main main__pd-sm">
+          <div class="category__wrap">
+            <div class="category__title">編輯分類</div>
+            <div class="category__inner">
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__dine"></div>
+                  <div class="category__txt">飲食</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__cloth"></div>
+                  <div class="category__txt">服飾</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__living"></div>
+                  <div class="category__txt">住家</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__rent"></div>
+                  <div class="category__txt">租金 </div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__transport"></div>
+                  <div class="category__txt">交通</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__education"></div>
+                  <div class="category__txt">教育</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__entertainment"></div>
+                  <div class="category__txt">娛樂</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__shopping active"></div>
+                  <div class="category__txt">購物百貨</div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__creditCard"></div>
+                  <div class="category__txt">繳卡費  </div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__transfer"></div>
+                  <div class="category__txt">帳號互轉          </div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__invest"></div>
+                  <div class="category__txt">投資</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__fixDeposit"></div>
+                  <div class="category__txt">定存</div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__moneyExchange"></div>
+                  <div class="category__txt">換匯</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__medical"></div>
+                  <div class="category__txt">醫療保健 </div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__sport"></div>
+                  <div class="category__txt">運動</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__ccc"></div>
+                  <div class="category__txt">3C          </div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__game"></div>
+                  <div class="category__txt">遊戲</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__nursary"></div>
+                  <div class="category__txt">育兒</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__pet"></div>
+                  <div class="category__txt">寵物          </div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__beauty"></div>
+                  <div class="category__txt">美容保養</div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__loan"></div>
+                  <div class="category__txt">貸款</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__tax"></div>
+                  <div class="category__txt">稅金</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__fee"></div>
+                  <div class="category__txt">費用/手續費</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__insurance"></div>
+                  <div class="category__txt">保險            </div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__donate"></div>
+                  <div class="category__txt">捐款</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__interest"></div>
+                  <div class="category__txt">利息         </div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__parents"></div>
+                  <div class="category__txt">孝親費</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__cash"></div>
+                  <div class="category__txt">零用金</div></a></div>
+              <div class="category__row"><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__travel"></div>
+                  <div class="category__txt">旅遊</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__social"></div>
+                  <div class="category__txt">交際</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__gift"></div>
+                  <div class="category__txt">贈與</div></a><a class="category__col" href="">
+                  <div class="icon-editCat icon-editCat__others"></div>
+                  <div class="category__txt">其他 </div></a></div>
+            </div>
+            <div class="category__more"> 
+              <p class="show-more">查看更多</p>
+            </div>
+          </div>
+          <div class="buttonSet__red"><a href="list_details_ex.html"> 取消</a><a class="primary" href="">套用             </a></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/vendor/jquery-3.6.0.min.securejs"></script>
+    <script src="./js/vendor/jquery-ui.min.securejs"></script>
+    <script src="./js/vendor/jquery.preload.min.securejs"></script>
+    <script src="./js/vendor/swiper-bundle.min.securejs"></script>
+    <script src="./js/global.securejs"></script>
+    <script>
+      $('.popup-toggle').on('click', function(e){
+        e.preventDefault();
+        $('.popup').toggleClass('is-visible');
+        $('body').toggleClass('scroll-fixed');
+      
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('.show-more').on('click' , function (e) {
+          $('.category__inner').toggleClass('show'); 
+          $('.show-more').hide();
+        });
+      });
+    </script>
+  </body>
+</html>

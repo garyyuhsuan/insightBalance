@@ -1,0 +1,128 @@
+extends _layout.pug
+
+//- 可覆寫 _layout.png 變數，或新增單頁所需變數
+append vars
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+//- 單頁樣式，或若有第三方樣式從這增加
+append style    
+  //- link(rel="stylesheet" href="./css/category_details_in.css")
+  link(rel="stylesheet" href="./css/master.css")
+
+//- main 區塊
+append main 
+  .container-fluid.maxWidth-768
+    .wrapper.income
+      .main__categoryDetail
+    .canvas.cat
+      .category-detail__container.flex-box
+        .category-detail__container-left
+          .category__piechart--in
+            .percentage--in 65% 
+        .category-detail__container-right
+          .flex-top.flex-between
+            .category-detail__title.bold 投資
+            .close-img
+              a(href="index.html")
+                img(src="./images/global/icon_close_x.svg" alt="") 
+          .flex-bottom
+            .category-detail__amount--in.bold 32,423 
+
+      .sort__number#sorting 
+        span  共189筆             
+        a(href="#myModal").icon__sorting.popup_toggle
+ 
+      .details
+
+        .heading__date 2022年2月
+
+        ul.list
+          li.pull_keep
+            a(href="list_details_in.html")
+              .flxList
+                .flxList__line1 
+                  .list__pill 
+                    .pills.pills__invest 投資
+                  .list__content 包你發娛樂城老子有錢
+                  .list__amount.amount-style.color-in 100,000 
+                .flxList__line2
+                  .list__date 2022/03/22 
+                  .list__account 營業部DAWHO活期儲蓄存款
+          li.pull_keep
+            a(href="list_details_in.html")
+              .flxList 
+                .flxList__line1 
+                  .list__pill 
+                    .pills.pills__invest 投資
+                  .list__content 包你發娛樂城老子有錢
+                  .list__amount.amount-style.color-in 100,000 
+                .flxList__line2
+                  .list__date 2022/03/22 
+                  .list__account 營業部DAWHO活期儲蓄存款
+          li.pull_keep
+            a(href="list_details_in.html")
+              .flxList.exclude  
+                .flxList__line1 
+                  .list__pill 
+                    .pills.pills__invest 投資
+                  .list__content 包你發娛樂城老子有錢
+                  .list__amount.amount-style.color-in 100,000 
+                .flxList__line2
+                  .list__date 2022/03/22 
+                  .list__account 營業部DAWHO活期儲蓄存款
+
+        .cat.heading__date 2022年2月
+
+        ul.list
+          li.pull_keep
+            a(href="list_details_in.html")
+              .flxList 
+                .flxList__line1 
+                  .list__pill 
+                    .pills.pills__invest 投資
+                  .list__content 包你發娛樂城老子有錢
+                  .list__amount.amount-style.color-in 100,000 
+                .flxList__line2
+                  .list__date 2022/03/22 
+                  .list__account 營業部DAWHO活期儲蓄存款
+
+        //- 提示 - 觸發載入更多
+
+        .sk-fading-circle.mini-loader
+          .sk-circle1.sk-circle.color-in
+          .sk-circle2.sk-circle.color-in
+          .sk-circle3.sk-circle.color-in
+          .sk-circle4.sk-circle.color-in
+          .sk-circle5.sk-circle.color-in
+          .sk-circle6.sk-circle.color-in
+          .sk-circle7.sk-circle.color-in
+          .sk-circle8.sk-circle.color-in
+          .sk-circle9.sk-circle.color-in
+          .sk-circle10.sk-circle.color-in
+
+    .popup2#myModal
+      .content
+        .content-title
+          h3 選擇排序
+          a(href="") 取消
+        ul.sorting 
+          li 
+            a(href="").active 金額由大到小
+          li
+            a(href="") 金額由小到大 
+          li
+            a(href="") 時間由近至遠
+          li
+            a(href="") 時間由遠至近  
+
+//- 單頁 Javascript
+
+append script  
+  script(src="./js/vendor/pullkeep.js") 
+  script(src="./js/vendor/custom-select.securejs")
+  script(src="./js/vendor/pk.js")
+
+
+
+
+

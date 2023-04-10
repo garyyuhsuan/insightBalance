@@ -1,0 +1,58 @@
+block vars 
+  - var author = '永豐銀行'
+  - var og_title = '智慧收支帳本'
+  - var og_url = ''
+  - var og_image = ''
+  - var og_desc = ''
+
+doctype html
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    meta(property='og:title' content=og_title ? og_title + ' - ' + author : '')
+    meta(property='og:image' content=og_image || '')
+    meta(property='og:url' content=og_url || '')
+    meta(property='og:description' content=og_desc || '')
+    meta(name='author' content=author || '')
+    meta(name='copyright' content=author || '')
+    meta(name='description' content=og_desc || '')
+    title #{og_title ? og_title + ' - ' + author : ''}
+    link(rel='shortcut icon' href='./images/favicon.ico')
+
+    block style
+      link(rel="stylesheet" href="./css/layout/swiper-bundle.min.css")
+  body
+    block header
+      include component/_header.pug
+      if data_header !== undefined
+        +header(data_header)
+
+    block main
+      .popup
+        .popup-overlay.popup-toggle 
+        .popup-wrapper.popup-transition 
+          .popup-header.bold
+            img(src="./images/global/triangle_alert_red.svg" alt="")#img_alert
+            .popup-heading 即將離開
+          .popup-body
+            .popup-content 您即將離開智慧收支帳本，回到行動銀行
+            .btnSet__ex#btnSet-popup
+              a.popup-toggle 留下來
+              a.primary.popup-toggle 忍痛退出
+
+
+    block script 
+      script(src="./js/vendor/jquery-3.6.0.min.securejs")
+      script(src="./js/vendor/jquery-ui.min.securejs")
+      script(src="./js/vendor/jquery.preload.min.securejs")
+      script(src="./js/vendor/swiper-bundle.min.securejs")
+      script(src="./js/global.securejs")
+      script. 
+        $('.popup-toggle').on('click', function(e){
+          e.preventDefault();
+          $('.popup').toggleClass('is-visible');
+          $('body').toggleClass('scroll-fixed');
+
+        });

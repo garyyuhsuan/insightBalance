@@ -1,0 +1,72 @@
+$(document).ready(function () {
+  $(".js-clearSearchBox").css("opacity", "0");
+
+  $(".search").focus(function () {
+    $(".searchBox-fakeInput").toggleClass("is-focussed");
+  });
+
+  // 開始敲鍵盤時 >>> 顯示"清空btn"
+  $(".search").keyup(function () {
+    if ($(this).val() != "") {
+      $(".js-clearSearchBox").css("opacity", "1");
+    } else {
+      $(".js-clearSearchBox").css("opacity", "0");
+    }
+
+    $(window).bind("keydown", function (e) {
+      if (e.keyCode === 27) {
+        $(".search").val("");
+      }
+    });
+  });
+  // click the button
+  $(".js-clearSearchBox").click(function () {
+    $(".search").val("");
+    $(".js-clearSearchBox").css("opacity", "0");
+  });
+});
+
+function startSearchFilter() {
+
+  
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("searchTyped");
+  li = ul.getElementsByClassName("search-result__row");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      console.log(li);
+      li[i].style.display = "";
+    } else {
+      console.log("執行for");
+      li[i].style.display = "none";
+    }
+  }
+}
+
+function showKeywords() {
+  document.getElementById("searchTyped").style.display = "block";
+  document.getElementById("searchDefault").style.display = "none";
+}
+
+function hideKeywords() {
+  document.getElementById("searchTyped").style.display = "none";
+  document.getElementById("searchDefault").style.display = "block";
+}
+
+//當key字搜尋
+$(document).ready(function () {
+  $("#delete").click(function () {
+    $(".search_lists").hide();
+    $("#delete").hide();
+    $("#noSearchResult").show();
+    return false;
+  });
+});

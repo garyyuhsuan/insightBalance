@@ -1,0 +1,20 @@
+
+//-   var datas = 
+//-     { 
+//-       hasArrow: true, // 有箭頭
+//-       hasArrowHeader: true, // 有箭頭(跟首頁有關的頁面)
+//-       hasClose: true, // 有關閉icon'
+//-     }
+
+mixin header(data) 
+    .container-fluid.maxWidth-768
+        .header-content   
+            .flex-left.icon-arrow-back
+                if data.hasArrow
+                    img(src="./images/global/icon_arrow_back.svg", alt="")(onclick="history.back()")
+                if data.hasArrowHeader
+                    img(src="./images/global/icon_arrow_back.svg", alt="").popup-toggle
+            .flex-center.text-center.bold 智慧收支帳本
+            .flex-right.icon-backtosinopac
+                if data.hasClose
+                    //- img(src="./images/global/icon_backtosinopac.svg", alt="")

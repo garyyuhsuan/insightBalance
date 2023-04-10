@@ -1,0 +1,60 @@
+block vars 
+  - var author = '永豐銀行'
+  - var og_title = '智慧收支帳本'
+  - var og_url = ''
+  - var og_image = ''
+  - var og_desc = ''
+  - var data_header = {hasArrow: true, hasArrowHeader: false, hasClose: false}
+
+doctype html
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    meta(property='og:title' content=og_title ? og_title + ' - ' + author : '')
+    meta(property='og:image' content=og_image || '')
+    meta(property='og:url' content=og_url || '')
+    meta(property='og:description' content=og_desc || '')
+    meta(name='author' content=author || '')
+    meta(name='copyright' content=author || '')
+    meta(name='description' content=og_desc || '')
+    title #{og_title ? og_title + ' - ' + author : ''}
+    link(rel='shortcut icon' href='./images/favicon.ico')
+
+    block style
+      link(rel="stylesheet" href="./css/layout/swiper-bundle.min.css")
+      link(rel="stylesheet" href="./css/master.css")
+  body.scroll-fixed
+    block header
+      include component/_header.pug
+      if data_header !== undefined
+        +header(data_header)
+
+    block main
+      .popup.is-visible
+        .popup-overlay
+        .popup-wrapper.popup-transition 
+          .popup-header.bold
+            img(src="./images/global/triangle_alert_red.svg" alt="")#img_alert
+            .popup-heading 您的身分不符喔！
+          .popup-body
+            .popup-content.text-align__left 本服的務適用對象為持有本行存款帳戶之本國自然人或持有居留證(統一證號)之外國人，且年滿18歲。
+            .btnSet__ex#btnSet-popup
+              //- a 留下來
+              a.primary.btn-num__one 返回首頁
+
+
+    block script 
+      script(src="./js/vendor/jquery-3.6.0.min.securejs")
+      script(src="./js/vendor/jquery-ui.min.securejs")
+      script(src="./js/vendor/jquery.preload.min.securejs")
+      script(src="./js/vendor/swiper-bundle.min.securejs")
+      script(src="./js/global.securejs")
+      script. 
+        $('.popup-toggle').on('click', function(e){
+          e.preventDefault();
+          $('.popup').toggleClass('is-visible');
+          $('body').toggleClass('scroll-fixed');
+        });
+

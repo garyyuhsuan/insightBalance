@@ -1,0 +1,1931 @@
+//Globals
+.icon__close {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background: url("../images/global/icon_close_x.svg")top left no-repeat;
+   background-size: 100%;
+}
+.icon__sorting {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background: url("../images/global/icon_sorting.svg")top left no-repeat;
+}
+.icon__sorting__gold {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background: url("../images/global/icon_sorting.svg")top left no-repeat;
+}
+//賺最多
+.earning__most {  
+      display:block;
+      content: "";
+      position: absolute;
+      width:28px;
+      height:17px;
+     border-radius: 50%;
+      margin-left: 8px;
+      margin-top:-8px;
+      background: url("../images/icons/icon_crown.svg")top left no-repeat; 
+      background-position: 3px 3px;
+}
+
+//分類 icons 
+   //收入 icon 40x40尺寸
+// .icon {
+//    width: 40px;
+//    height: 40px;
+//    border-radius: 50%;
+//    display: inline-block;
+//    margin:20px 20px 0px 20px;
+//    @media (min-width:414px) {
+//       margin:20px 25px 0px 25px; 
+//    }
+//    @media (max-width:360px) {
+//       margin:20px 18px 0px 18px; 
+//    }
+//    @media (max-width:320px) {
+//       margin:20px 12px 0px 13px; 
+//    }
+//    &.iconWhite{
+//    &__salary {
+//       background: url("../images/mini/salary.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/salary.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__mobilePay {
+//       background: url("../images/mini/mobile_pay.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 12px 10px;
+//       &.active {
+//          background: url("../images/mini/mobile_pay.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 12px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__allowance {
+//       background: url("../images/mini/allowance.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/allowance.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__transfer {
+//       background: url("../images/mini/transfer.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/transfer.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__interest {
+//       background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__bonus {
+//       background: url("../images/mini/coin.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/coin.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__rent {
+//       background: url("../images/mini/rent.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/rent.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 11px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cashReturn {
+//       background: url("../images/mini/cashback.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 8px;
+//       &.active {
+//          background: url("../images/mini/cashback.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__invest {
+//       background: url("../images/mini/invest.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/invest.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__fixDeposit {
+//       background: url("../images/mini/piggy.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/piggy.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cashBack {
+//       background: url("../images/mini/creditCard.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 10px;
+//       &.active {
+//          background: url("../images/mini/creditCard.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__moneyExchange {
+//       background: url("../images/mini/money_exchange.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/money_exchange.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 9px 9px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__loanIncome {
+//       background: url("../images/mini/database.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/database.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__insurance {
+//       background: url("../images/mini/FirstAidKit.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/FirstAidKit.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__pension {
+//       background: url("../images/mini/retire.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/retire.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 9px 9px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cash {
+//       background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+  
+//    &__prepay {
+//       background: url("../images/mini/prepay.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/prepay.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__gift {
+//       background: url("../images/mini/present.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/present.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__others {
+//       background: url("../images/mini/other.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/other.svg")top left no-repeat $dk-blue;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: #CB8C7A;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+ 
+
+//  //- 支出 40x40尺寸
+
+//    &__dine {
+//       background: url("../images/mini/dine.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/dine.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cloth {
+//       background: url("../images/mini/cloth.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/cloth.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__living {
+//       background: url("../images/mini/sofa.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 10px;
+//       &.active {
+//          background: url("../images/mini/sofa.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__rent_expense {
+//       background: url("../images/mini/rent.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/rent.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__transport {
+//       background: url("../images/mini/car.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 14px;
+//       &.active {
+//          background: url("../images/mini/car.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 14px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__education {
+//       background: url("../images/mini/education.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 11px 12px;
+//       &.active {
+//          background: url("../images/mini/education.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 11px 12px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__entertainment {
+//       background: url("../images/mini/entertainment.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 11px;
+//       &.active {
+//          background: url("../images/mini/entertainment.svg")top left no-repeat $red;
+//          background-size: 55%;           
+//          background-position: 9px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__shopping {
+//       background: url("../images/mini/shopping.svg")top left no-repeat $gray-9;
+//       background-size: 35%;
+//       background-position: 13px 11px;
+//       &.active {
+//          background: url("../images/mini/shopping.svg")top left no-repeat $red;
+//          background-size: 35%;           
+//          background-position: 13px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__creditCard {
+//       background: url("../images/mini/creditCard.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/creditCard.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__transfer__expense {
+//       background: url("../images/mini/transfer.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/transfer.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__mobilePay__expense {
+//       background: url("../images/mini/mobile_pay.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/mobile_pay.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__medical {
+//       background: url("../images/mini/medical.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/medical.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cash__expense {
+//       background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $gray-9;
+//       background-size: 55%;
+//       background-position: 9px 9px;
+//       &.active {
+//          background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background:$superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__payCash {
+//       background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__insurance__expense {
+//       background: url("../images/mini/FirstAidKit.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/FirstAidKit.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__fee {
+//       background: url("../images/mini/fee.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/fee.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__others__expense {
+//       background: url("../images/mini/other.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/other.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__tax {
+//       background: url("../images/mini/tax.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/tax.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__invest__expense{
+//       background: url("../images/mini/invest.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/invest.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__sport {
+//       background: url("../images/mini/sport.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/sport.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__ccc {
+//       background: url("../images/mini/laptop.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 11px;
+//       &.active {
+//          background: url("../images/mini/laptop.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 11px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__game {
+//       background: url("../images/mini/game.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/game.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__nursary {
+//       background: url("../images/mini/baby.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/baby.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__pet {
+//       background: url("../images/mini/pets.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/pets.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__beauty {
+//       background: url("../images/mini/beauty.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/beauty.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__loan {
+//       background: url("../images/mini/database.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/database.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__donate {
+//       background: url("../images/mini/donate.svg")top left no-repeat $gray-9;
+//       background-size: 45%;
+//       background-position: 11px 10px;
+//       &.active {
+//          background: url("../images/mini/donate.svg")top left no-repeat $red;
+//          background-size: 45%;           
+//          background-position: 11px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__interest__expense {
+//       background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/CurrencyCircleDollar.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background:$superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__present {
+//       background: url("../images/mini/present.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/present.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__parents {
+//       background: url("../images/mini/parents.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/parents.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__cash {
+//       background: url("../images/mini/coin.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/coin.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__travel {
+//       background: url("../images/mini/travel.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/travel.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__social {
+//       background: url("../images/mini/social.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/social.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed;
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__gift__expense {
+//       background: url("../images/mini/present.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/present.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed; 
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__fixDeposit__expense {
+//       background: url("../images/mini/piggy.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/piggy.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed; 
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+//    &__moneyExchange__expense {
+//       background: url("../images/mini/money_exchange.svg")top left no-repeat $gray-9;
+//       background-size: 50%;
+//       background-position: 10px 10px;
+//       &.active {
+//          background: url("../images/mini/money_exchange.svg")top left no-repeat $red;
+//          background-size: 50%;           
+//          background-position: 10px 10px;
+//          &:before {
+//             display:block;
+//             content: "";
+//             position: absolute;
+//             width:14px;
+//             height:14px;
+//             background: $superRed; 
+//             border-radius: 50%;
+//             margin-left: 28px;
+//             border:1px solid $white;
+//          }
+//          &:after {
+//             display:block;
+//             content: "";
+//             position:absolute;
+//             margin-left:34px;
+//             margin-top:4px;
+//             width:3px;
+//             height:5px;
+//             border:1px solid $white;
+//             border-left:0;
+//             border-top:0;
+//             transform:rotate(45deg);
+//          }
+//       }
+//    }
+// }
+// }
+
+

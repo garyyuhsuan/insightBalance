@@ -1,0 +1,148 @@
+// @import "layout";
+
+.main {
+   &__search{
+      display: block;
+      padding: 16px;
+   }
+}
+
+//-自動顯示關鍵字  //-有&無搜尋紀錄(.search_lists控制去留)  
+.search-result__content {
+   margin: 10px 0;
+
+   .title {
+      color: $gray-6;
+      line-height: 24px;
+   }
+
+   .content {
+      color: $gray-9;
+      font-size: 0.9rem;
+   }
+
+   .search-result__title {
+      img{
+         padding-right: 8px;
+      }
+   }
+   .search-result__list{
+      .search-result__row{
+         color: $black-1;
+         border-bottom: 1px solid #eee;
+         padding: 10px 0;
+         height: 21px;
+         .delete-btn{
+            padding-right: 8px;
+         }
+         a {
+            list-style: none;
+            color: $black-1;
+         }
+      }
+   }
+}
+
+.keyWords__btn {
+   display: inline-block;
+   color: $black;
+   padding: 6px 12px;
+   margin-right: 5px;
+   background: $off-white-1;
+   border-radius: 4px;
+   font-weight: 400;
+   margin-top: 10px;
+}
+
+//搜尋輸入框
+.search__inputArea {
+   span {
+      width: 100%;
+      display: block;
+   }
+}
+
+.flex-between {
+   @extend %flex-between;
+   margin: inherit !important;
+}
+
+.flex-left {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.flex-right {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.flex-full {
+   flex: 1;
+}
+
+.clear-search-icon {
+   margin-left: -22px;
+}
+
+.cancel-btn-icon {
+   padding: 5px;
+   font-size: 0.9rem;
+   font-weight: bold;
+   color: $gray-6;
+   margin-left: 20px;
+}
+
+input.search[type="text"] {
+   flex-grow: 2;
+   font-size: 0.9rem;
+   padding: 5px 10px;
+   height: 30px;
+   flex-shrink: 1;
+   // input state styles
+   border-radius: 4px;
+   border: 1px solid;
+   outline: none;
+
+   @media (max-width:425px) {
+      width: 90%;
+   }
+
+   &:focus:valid {
+      color: #242424;
+      border-color: #707070;
+      background-color: #fff;
+      box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.04);
+   }
+
+   &:valid {
+      color: #242424;
+      border-color: #ededed;
+      background-color: #fff;
+   }
+
+   &:invalid {
+      color: #9c9c9c;
+      border-color: #ededed;
+      background-color: #fff;
+   }
+
+   &.error {
+      color: #cf0209;
+      border-color: #cf0209;
+      background-color: #fff3f3;
+   }
+}
+
+.search-trend {
+  &__title {
+    color: #4A4A4A;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

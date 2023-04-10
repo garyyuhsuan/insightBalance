@@ -1,0 +1,103 @@
+.main {
+  &__categoryDetail {
+    display: block;
+    height: 132px;
+  }
+}
+
+.category-detail {
+  &__container {
+    padding: 30px 0 16px 0;
+    margin: 0 20px;
+
+    &-right {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__amount {
+    &--in {
+      font-size: 1.8rem;
+      color: #4686a5;
+    }
+
+    &--ex {
+      font-size: 1.8rem;
+      color: $superRed;
+    }
+  }
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-box {
+  display: flex;
+
+  .flex-top {
+    display: flex;
+  }
+}
+
+// piechart
+.category__piechart {
+  &--in {
+    position: relative;
+    background: conic-gradient(#1470ca 0% 65%, #e2f2f6 65%);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  &--ex {
+    position: relative;
+    background: conic-gradient(#ff4f00 0% 65%, #ffe1df 65%);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+}
+.percentage {
+  &--in {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 44px;
+    color: #1470ca;
+    background-color: #fff;
+  }
+  &--ex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 44px;
+    color: #67645f;
+    background-color: #fff;
+  }
+}

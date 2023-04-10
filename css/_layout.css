@@ -1,0 +1,4694 @@
+#jpreOverlay {
+    background-color: #8a8a8a
+}
+
+#jpreSlide {
+    font-size: 100px;
+    font-weight: bold;
+    color: #8DC1CE;
+    text-align: center;
+    width: 100%;
+    height: 30%
+}
+
+#jpreButton,
+#jprePercentage {
+    display: none
+}
+
+#jSplash {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-animation: animateBg 10s linear infinite;
+    animation: animateBg 10s linear infinite;
+    width: 85%;
+    max-width: 320px;
+    height: 320px;
+    background: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 30%;
+    z-index: 100
+}
+
+section .preloader {
+    position: relative;
+    width: 7.5rem;
+    height: 7.5rem
+}
+
+section .preloader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(calc(20deg * var(--i)));
+    -ms-transform: rotate(calc(20deg * var(--i)));
+    transform: rotate(calc(20deg * var(--i)))
+}
+
+section .preloader span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #8DC1CE;
+    -webkit-animation: animate 2s linear infinite;
+    animation: animate 2s linear infinite;
+    -webkit-animation-delay: calc(0.1s * var(--i));
+    animation-delay: calc(0.1s * var(--i))
+}
+
+section.mini {
+    -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+    -webkit-box-align: unset;
+    -webkit-align-items: unset;
+    -ms-flex-align: unset;
+    align-items: unset;
+    display: inline-block;
+    -webkit-animation: animateBg 10s linear infinite;
+    animation: animateBg 10s linear infinite;
+    width: unset !important;
+    max-width: unset !important;
+    height: unset !important;
+    background: unset;
+    border-radius: 8px;
+    position: unset !important;
+    z-index: 9 !important
+}
+
+section.mini .preloader {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem
+}
+
+section.mini .preloader span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
+    -webkit-transform: rotate(calc(20deg * var(--i)));
+    -ms-transform: rotate(calc(20deg * var(--i)));
+    transform: rotate(calc(20deg * var(--i)))
+}
+
+section.mini .preloader span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8DC1CE;
+    -webkit-animation: animate 2s linear infinite;
+    animation: animate 2s linear infinite;
+    -webkit-animation-delay: calc(0.1s * var(--i));
+    animation-delay: calc(0.1s * var(--i))
+}
+
+@-webkit-keyframes animate {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    80%,
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+}
+
+@keyframes animate {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    80%,
+    to {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 50px;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 0.6;
+    z-index: 99
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.text-center {
+    text-align: center
+}
+
+.bold {
+    font-weight: 700
+}
+
+a:link {
+    text-decoration: none
+}
+
+.button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #707070;
+    background: #FFF;
+    color: #67645F;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 40%;
+    text-align: center
+}
+
+.button.primary {
+    background: #4686A5;
+    border: 1px solid #4686A5;
+    color: #FFF
+}
+
+.button__red {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #CF0209;
+    background: #FFF;
+    color: #67645F;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 40%;
+    text-align: center
+}
+
+.button__red.primary {
+    background: #CF0209;
+    border: 1px solid #CF0209;
+    color: #FFF
+}
+
+.btnSet {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.btnSet a {
+    width: 50%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #4686A5;
+    background: #FFF;
+    color: #4686A5;
+    font-weight: bold;
+    font-size: 1rem
+}
+
+.btnSet a.primary {
+    background: #4686A5;
+    color: #FFF
+}
+
+.btnSet__red {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.btnSet__red a {
+    width: 50%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #CF0209;
+    background: #FFF;
+    color: #CF0209;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 49%
+}
+
+.btnSet__red a.primary {
+    background: #CF0209;
+    color: #FFF
+}
+
+.buttonSet {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+@media (max-width:320px) {
+    .buttonSet {
+        margin-top: 20px
+    }
+}
+
+.buttonSet a {
+    display: inline-block;
+    padding: 12px 20px;
+    width: calc(46% - 40px);
+    margin: 12px 0;
+    border-radius: 4px;
+    background: #FFF;
+    color: #4686A5;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #4686A5
+}
+
+.buttonSet a.primary {
+    background: #4686A5;
+    color: #FFF;
+    border: 1px solid #4686A5
+}
+
+.buttonSet a.invisible {
+    background: #C4C4C4;
+    color: white;
+    border: #C4C4C4
+}
+
+.buttonSet__red {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+@media (max-width:320px) {
+    .buttonSet__red {
+        margin-top: 20px
+    }
+}
+
+.buttonSet__red a {
+    display: inline-block;
+    padding: 12px 20px;
+    width: calc(46% - 40px);
+    margin: 12px 0;
+    border-radius: 4px;
+    background: #FFF;
+    color: #CF0209;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #CF0209
+}
+
+.buttonSet__red a.primary {
+    background: #CF0209;
+    color: #FFF;
+    border: 1px solid #CF0209
+}
+
+.buttonSet__red a.invisible {
+    background: #C4C4C4;
+    color: white;
+    border: #C4C4C4
+}
+
+table.search__area {
+    color: #707070;
+    width: 100%
+}
+
+table.search__area tr td:nth-child(2) {
+    text-align: right
+}
+
+table.search__area tr td a:first-child {
+    margin-right: 10px
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block
+}
+
+.custom-select select {
+    display: none
+}
+
+.select-selected {
+    background-color: #F9F6F5
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 24px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #888 transparent transparent transparent
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #888 transparent;
+    top: 16px
+}
+
+.select-items div {
+    color: #67645F;
+    padding: 6px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.8rem
+}
+
+.select-selected {
+    color: #67645F;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    margin-top: 10px
+}
+
+.select-items {
+    position: absolute;
+    border: 1px solid #eee;
+    background: #FFF;
+    top: 100%;
+    left: 4px;
+    right: 0;
+    z-index: 3;
+    border-radius: 5px;
+    width: 90%
+}
+
+.select-hide {
+    display: none
+}
+
+.same-as-selected,
+.select-items div:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.icon__close {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/global/icon_close_x.svg") top left no-repeat;
+    background-size: 100%
+}
+
+.icon__sorting {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/global/icon_sorting.svg") top left no-repeat
+}
+
+.icon__sorting__gold {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/global/icon_sorting.svg") top left no-repeat
+}
+
+.earning__most {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 17px;
+    border-radius: 50%;
+    margin-left: 8px;
+    margin-top: -8px;
+    background: url("../images/icons/icon_crown.svg") top left no-repeat;
+    background-position: 3px 3px
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 20px 20px 0px 20px
+}
+
+@media (min-width:414px) {
+    .icon {
+        margin: 20px 25px 0px 25px
+    }
+}
+
+@media (max-width:360px) {
+    .icon {
+        margin: 20px 18px 0px 18px
+    }
+}
+
+@media (max-width:320px) {
+    .icon {
+        margin: 20px 12px 0px 13px
+    }
+}
+
+.icon.iconWhite__salary {
+    background: url("../images/mini/salary.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__salary.active {
+    background: url("../images/mini/salary.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__salary.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__salary.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__mobilePay {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 12px 10px
+}
+
+.icon.iconWhite__mobilePay.active {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 12px 10px
+}
+
+.icon.iconWhite__mobilePay.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__mobilePay.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__allowance {
+    background: url("../images/mini/allowance.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__allowance.active {
+    background: url("../images/mini/allowance.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__allowance.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__allowance.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__transfer {
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__transfer.active {
+    background: url("../images/mini/transfer.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__transfer.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__transfer.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__interest {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__interest.active {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__interest.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__interest.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__bonus {
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__bonus.active {
+    background: url("../images/mini/coin.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__bonus.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__bonus.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__rent {
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__rent.active {
+    background: url("../images/mini/rent.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 11px 11px
+}
+
+.icon.iconWhite__rent.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__rent.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__cashReturn {
+    background: url("../images/mini/cashback.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 8px
+}
+
+.icon.iconWhite__cashReturn.active {
+    background: url("../images/mini/cashback.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__cashReturn.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__cashReturn.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__invest {
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__invest.active {
+    background: url("../images/mini/invest.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__invest.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__invest.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__fixDeposit {
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__fixDeposit.active {
+    background: url("../images/mini/piggy.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__fixDeposit.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__fixDeposit.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__cashBack {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.icon.iconWhite__cashBack.active {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__cashBack.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__cashBack.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__moneyExchange {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__moneyExchange.active {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__moneyExchange.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__moneyExchange.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__loanIncome {
+    background: url("../images/mini/database.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__loanIncome.active {
+    background: url("../images/mini/database.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__loanIncome.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__loanIncome.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__insurance {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__insurance.active {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__insurance.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__insurance.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__pension {
+    background: url("../images/mini/retire.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__pension.active {
+    background: url("../images/mini/retire.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__pension.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__pension.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__cash {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__cash.active {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__cash.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__cash.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__prepay {
+    background: url("../images/mini/prepay.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__prepay.active {
+    background: url("../images/mini/prepay.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__prepay.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__prepay.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__gift {
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__gift.active {
+    background: url("../images/mini/present.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__gift.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__gift.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__others {
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.icon.iconWhite__others.active {
+    background: url("../images/mini/other.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__others.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CB8C7A;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__others.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__dine {
+    background: url("../images/mini/dine.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__dine.active {
+    background: url("../images/mini/dine.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__dine.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__dine.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__cloth {
+    background: url("../images/mini/cloth.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__cloth.active {
+    background: url("../images/mini/cloth.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__cloth.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__cloth.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__living {
+    background: url("../images/mini/sofa.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.icon.iconWhite__living.active {
+    background: url("../images/mini/sofa.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__living.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__living.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__rent_expense {
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__rent_expense.active {
+    background: url("../images/mini/rent.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__rent_expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__rent_expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__transport {
+    background: url("../images/mini/car.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 14px
+}
+
+.icon.iconWhite__transport.active {
+    background: url("../images/mini/car.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 14px
+}
+
+.icon.iconWhite__transport.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__transport.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__education {
+    background: url("../images/mini/education.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 11px 12px
+}
+
+.icon.iconWhite__education.active {
+    background: url("../images/mini/education.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 11px 12px
+}
+
+.icon.iconWhite__education.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__education.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__entertainment {
+    background: url("../images/mini/entertainment.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 11px
+}
+
+.icon.iconWhite__entertainment.active {
+    background: url("../images/mini/entertainment.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 9px 11px
+}
+
+.icon.iconWhite__entertainment.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__entertainment.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__shopping {
+    background: url("../images/mini/shopping.svg") top left no-repeat #707070;
+    background-size: 35%;
+    background-position: 13px 11px
+}
+
+.icon.iconWhite__shopping.active {
+    background: url("../images/mini/shopping.svg") top left no-repeat #E34848;
+    background-size: 35%;
+    background-position: 13px 11px
+}
+
+.icon.iconWhite__shopping.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__shopping.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__creditCard {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__creditCard.active {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__creditCard.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__creditCard.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__transfer__expense {
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__transfer__expense.active {
+    background: url("../images/mini/transfer.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__transfer__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__transfer__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__mobilePay__expense {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__mobilePay__expense.active {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__mobilePay__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__mobilePay__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__medical {
+    background: url("../images/mini/medical.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__medical.active {
+    background: url("../images/mini/medical.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__medical.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__medical.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__payCash {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__payCash.active {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__payCash.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__payCash.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__insurance__expense {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__insurance__expense.active {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__insurance__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__insurance__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__fee {
+    background: url("../images/mini/fee.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__fee.active {
+    background: url("../images/mini/fee.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__fee.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__fee.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__others__expense {
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__others__expense.active {
+    background: url("../images/mini/other.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__others__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__others__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__tax {
+    background: url("../images/mini/tax.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__tax.active {
+    background: url("../images/mini/tax.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__tax.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__tax.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__invest__expense {
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__invest__expense.active {
+    background: url("../images/mini/invest.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__invest__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__invest__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__sport {
+    background: url("../images/mini/sport.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__sport.active {
+    background: url("../images/mini/sport.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__sport.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__sport.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__ccc {
+    background: url("../images/mini/laptop.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__ccc.active {
+    background: url("../images/mini/laptop.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.icon.iconWhite__ccc.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__ccc.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__game {
+    background: url("../images/mini/game.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__game.active {
+    background: url("../images/mini/game.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__game.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__game.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__nursary {
+    background: url("../images/mini/baby.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__nursary.active {
+    background: url("../images/mini/baby.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__nursary.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__nursary.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__pet {
+    background: url("../images/mini/pets.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__pet.active {
+    background: url("../images/mini/pets.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__pet.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__pet.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__beauty {
+    background: url("../images/mini/beauty.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__beauty.active {
+    background: url("../images/mini/beauty.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__beauty.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__beauty.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__loan {
+    background: url("../images/mini/database.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__loan.active {
+    background: url("../images/mini/database.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__loan.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__loan.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__donate {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__donate.active {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__donate.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__donate.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__present {
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__present.active {
+    background: url("../images/mini/present.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__present.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__present.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__parents {
+    background: url("../images/mini/parents.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__parents.active {
+    background: url("../images/mini/parents.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__parents.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__parents.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__pettyCash {
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__pettyCash.active {
+    background: url("../images/mini/coin.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__pettyCash.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__pettyCash.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__travel {
+    background: url("../images/mini/travel.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__travel.active {
+    background: url("../images/mini/travel.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__travel.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__travel.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__social {
+    background: url("../images/mini/social.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__social.active {
+    background: url("../images/mini/social.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__social.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__social.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__gift__expense {
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__gift__expense.active {
+    background: url("../images/mini/present.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__gift__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__gift__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__fixDeposit__expense {
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__fixDeposit__expense.active {
+    background: url("../images/mini/piggy.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__fixDeposit__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__fixDeposit__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.icon.iconWhite__moneyExchange__expense {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__moneyExchange__expense.active {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon.iconWhite__moneyExchange__expense.active:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #CF0209;
+    border-radius: 50%;
+    margin-left: 28px;
+    border: 1px solid #FFF
+}
+
+.icon.iconWhite__moneyExchange__expense.active:after {
+    display: block;
+    content: "";
+    position: absolute;
+    margin-left: 34px;
+    margin-top: 4px;
+    width: 3px;
+    height: 5px;
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.pills__unDefine {
+    font-size: 0.8rem;
+    background: url("../images/mini/question.svg") top left no-repeat #E34848;
+    background-position: 4px 4px;
+    color: #FFF;
+    padding: 2px 5px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__salary {
+    font-size: 0.8rem;
+    background: url("../images/mini/salary.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__transfer {
+    font-size: 0.8rem;
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 18%;
+    background-position: 6px 4px;
+    color: #FFF;
+    padding: 2px 8px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__mobilePay {
+    font-size: 0.8rem;
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 18%;
+    background-position: 6px 4px;
+    color: #FFF;
+    padding: 2px 8px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__allowance {
+    font-size: 0.8rem;
+    background: url("../images/mini/allowance.svg") top left no-repeat #707070;
+    background-size: 24%;
+    background-position: 6px 4px;
+    color: #FFF;
+    padding: 2px 8px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__interest {
+    font-size: 0.8rem;
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 4px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__bonus {
+    font-size: 0.8rem;
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 4px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__rent {
+    font-size: 0.8rem;
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 32%;
+    background-position: 5px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__cashBack {
+    font-size: 0.8rem;
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 18%;
+    background-position: 6px 4px;
+    color: #FFF;
+    padding: 2px 8px 2px 20px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__cashReturn {
+    font-size: 0.8rem;
+    background: url("../images/mini/cashback.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 10px 2px 24px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__invest {
+    font-size: 0.8rem;
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__fixDeposit {
+    font-size: 0.8rem;
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__moneyExchange {
+    font-size: 0.8rem;
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__loanIncome {
+    font-size: 0.8rem;
+    background: url("../images/mini/database.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__insurance {
+    font-size: 0.8rem;
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 28%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__pension {
+    font-size: 0.8rem;
+    background: url("../images/mini/retire.svg") top left no-repeat #707070;
+    background-size: 22%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__cash {
+    font-size: 0.8rem;
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 22%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__prepay {
+    font-size: 0.8rem;
+    background: url("../images/mini/prepay.svg") top left no-repeat #707070;
+    background-size: 22%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__gift {
+    font-size: 0.8rem;
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__others {
+    font-size: 0.8rem;
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__dine {
+    font-size: 0.8rem;
+    background: url("../images/mini/dine.svg") top left no-repeat #707070;
+    background-size: 30%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__cloth {
+    font-size: 0.8rem;
+    background: url("../images/mini/cloth.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__living {
+    font-size: 0.8rem;
+    background: url("../images/mini/sofa.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__rent_expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 30%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__transport {
+    font-size: 0.8rem;
+    background: url("../images/mini/car.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 5px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__education {
+    font-size: 0.8rem;
+    background: url("../images/mini/education.svg") top left no-repeat #707070;
+    background-size: 29%;
+    background-position: 6px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__entertainment {
+    font-size: 0.8rem;
+    background: url("../images/mini/entertainment.svg") top left no-repeat #707070;
+    background-size: 29%;
+    background-position: 6px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__shopping {
+    font-size: 0.8rem;
+    background: url("../images/mini/shopping.svg") top left no-repeat #707070;
+    background-size: 20%;
+    background-position: 8px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__creditCard {
+    font-size: 0.8rem;
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 22%;
+    background-position: 6px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__transfer__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 20%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__mobilePay__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 24%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__allowance__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/allowance.svg") top left no-repeat #707070;
+    background-size: 20%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__invest__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__fixDeposit__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__moneyExchange__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__medical {
+    font-size: 0.8rem;
+    background: url("../images/mini/medical.svg") top left no-repeat #707070;
+    background-size: 20%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__sport {
+    font-size: 0.8rem;
+    background: url("../images/mini/sport.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 3px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__ccc {
+    font-size: 0.8rem;
+    background: url("../images/mini/laptop.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__game {
+    font-size: 0.8rem;
+    background: url("../images/mini/game.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__nursary {
+    font-size: 0.8rem;
+    background: url("../images/mini/baby.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__pet {
+    font-size: 0.8rem;
+    background: url("../images/mini/pets.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__beauty {
+    font-size: 0.8rem;
+    background: url("../images/mini/beauty.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__loan {
+    font-size: 0.8rem;
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__tax {
+    font-size: 0.8rem;
+    background: url("../images/mini/tax.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__fee {
+    font-size: 0.8rem;
+    background: url("../images/mini/fee.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__insurance__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__donate {
+    font-size: 0.8rem;
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__present {
+    font-size: 0.8rem;
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__parents {
+    font-size: 0.8rem;
+    background: url("../images/mini/parents.svg") top left no-repeat #707070;
+    background-size: 24%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__pettyCash {
+    font-size: 0.8rem;
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 23%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__travel {
+    font-size: 0.8rem;
+    background: url("../images/mini/travel.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__social {
+    font-size: 0.8rem;
+    background: url("../images/mini/social.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__gift__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.pills__others__expense {
+    font-size: 0.8rem;
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 27%;
+    background-position: 6px 2px;
+    color: #FFF;
+    padding: 2px 9px 2px 25px;
+    border-radius: 15px;
+    display: inline-block
+}
+
+.exclude .pills__salary {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__transfer {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__mobilePay {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__allowance {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__interest {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__bonus {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__rent {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__cashBack {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__cashReturn {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__invest {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__fixDeposit {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__moneyExchange {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__loanIncome {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__insurance {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__pension {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__cash {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__prepay {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__gift {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__others {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__dine {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__cloth {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__living {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__rent_expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__transport {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__education {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__entertainment {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__shopping {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__creditCard {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__transfer__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__mobilePay__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__allowance__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__invest__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__fixDeposit__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__moneyExchange__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__medical {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__sport {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__ccc {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__game {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__nursary {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__pet {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__beauty {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__loan {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__tax {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__fee {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__insurance__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__donate {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__present {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__parents {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__pettyCash {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__travel {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__social {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__gift__expense {
+    background-color: #c4c4c4
+}
+
+.exclude .pills__others__expense {
+    background-color: #c4c4c4
+}
+
+.iconM {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2px
+}
+
+.iconM__salary {
+    background: url("../images/mini/salary.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__mobilePay {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 8px 9px
+}
+
+.iconM__allowance {
+    background: url("../images/mini/allowance.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__transfer {
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__interest {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__bonus {
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__rent {
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconM__cashReturn {
+    background: url("../images/mini/cashback.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 7px
+}
+
+.iconM__invest {
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconM__fixDeposit {
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__cashBack {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__moneyExchange {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__loanIncome {
+    background: url("../images/mini/database.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__insurance {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__pension {
+    background: url("../images/mini/retire.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 8px
+}
+
+.iconM__cash {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 9px
+}
+
+.iconM__prepay {
+    background: url("../images/mini/prepay.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 9px
+}
+
+.iconM__gift {
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 9px
+}
+
+.iconM__others {
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 9px
+}
+
+.iconM__dine {
+    background: url("../images/mini/dine.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconM__cloth {
+    background: url("../images/mini/cloth.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconM__living {
+    background: url("../images/mini/sofa.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 9px
+}
+
+.iconM__rent_expense {
+    background: url("../images/mini/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconM__transport {
+    background: url("../images/mini/car.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 13px
+}
+
+.iconM__education {
+    background: url("../images/mini/education.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconM__entertainment {
+    background: url("../images/mini/entertainment.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 8px 10px
+}
+
+.iconM__shopping {
+    background: url("../images/mini/shopping.svg") top left no-repeat #707070;
+    background-size: 35%;
+    background-position: 12px 10px
+}
+
+.iconM__creditCard {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 10px
+}
+
+.iconM__transfer__expense {
+    background: url("../images/mini/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 10px
+}
+
+.iconM__allowance__expense {
+    background: url("../images/mini/allowance.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 8px 9px
+}
+
+.iconM__mobilePay__expense {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__invest__expense {
+    background: url("../images/mini/invest.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconM__medical {
+    background: url("../images/mini/medical.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__payCash {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconM__insurance__expense {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__fee {
+    background: url("../images/mini/fee.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 10px
+}
+
+.iconM__others__expense {
+    background: url("../images/mini/other.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__tax {
+    background: url("../images/mini/tax.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__sport {
+    background: url("../images/mini/sport.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 10px
+}
+
+.iconM__ccc {
+    background: url("../images/mini/laptop.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__game {
+    background: url("../images/mini/game.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__nursary {
+    background: url("../images/mini/baby.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__pet {
+    background: url("../images/mini/pets.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__beauty {
+    background: url("../images/mini/beauty.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__loan {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__donate {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__present {
+    background: url("../images/mini/present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__parents {
+    background: url("../images/mini/parents.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__pettyCash {
+    background: url("../images/mini/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__travel {
+    background: url("../images/mini/travel.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__social {
+    background: url("../images/mini/social.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__gift__expense {
+    background: url("../images/mini//present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__fixDeposit__expense {
+    background: url("../images/mini/piggy.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconM__moneyExchange__expense {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 9px 9px
+}
+
+.iconWhite {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #fdce86;
+    border-top: 1px solid #eed1a6;
+    border-bottom: 1px solid #c09b67;
+    margin-top: 2px
+}
+
+.iconWhite__salary {
+    background: url("../images/mini_white/salary.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__mobilePay {
+    background: url("../images/mini_white/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 12px 10px
+}
+
+.iconWhite__transfer {
+    background: url("../images/mini_white/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__interest {
+    background: url("../images/mini_white/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__bonus {
+    background: url("../images/mini_white/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__rent {
+    background: url("../images/mini_white/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__cashReturn {
+    background: url("../images/mini_white/cashback.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 8px
+}
+
+.iconWhite__invest {
+    background: url("../images/mini_white/invest.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__fixDeposit {
+    background: url("../images/mini_white/piggy.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__cashBack {
+    background: url("../images/mini_white/creditCard.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__moneyExchange {
+    background: url("../images/mini_white/money_exchange.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconWhite__loanIncome {
+    background: url("../images/mini_white/database.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconWhite__insurance {
+    background: url("../images/mini_white/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconWhite__pension {
+    background: url("../images/mini_white/retire.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 9px
+}
+
+.iconWhite__cash {
+    background: url("../images/mini_white/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__prepay {
+    background: url("../images/mini_white/prepay.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__gift {
+    background: url("../images/mini_white/present.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__others {
+    background: url("../images/mini_white/other.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__dine {
+    background: url("../images/mini_white/dine.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__cloth {
+    background: url("../images/mini_white/cloth.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__living {
+    background: url("../images/mini_white/sofa.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 10px
+}
+
+.iconWhite__rent_expense {
+    background: url("../images/mini_white/rent.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 10px
+}
+
+.iconWhite__transport {
+    background: url("../images/mini_white/car.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 14px
+}
+
+.iconWhite__education {
+    background: url("../images/mini_white/education.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 10px 11px
+}
+
+.iconWhite__entertainment {
+    background: url("../images/mini_white/entertainment.svg") top left no-repeat #707070;
+    background-size: 55%;
+    background-position: 9px 11px
+}
+
+.iconWhite__shopping {
+    background: url("../images/mini_white/shopping.svg") top left no-repeat #707070;
+    background-size: 35%;
+    background-position: 13px 11px
+}
+
+.iconWhite__creditCard {
+    background: url("../images/mini_white/creditCard.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconWhite__transfer__expense {
+    background: url("../images/mini_white/transfer.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconWhite__mobilePay__expense {
+    background: url("../images/mini_white/mobile_pay.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 11px 10px
+}
+
+.iconWhite__invest__expense {
+    background: url("../images/mini_white/invest.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 11px 11px
+}
+
+.iconWhite__medical {
+    background: url("../images/mini_white/medical.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconWhite__payCash {
+    background: url("../images/mini_white/CurrencyCircleDollar.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 11px 12px
+}
+
+.iconWhite__insurance__expense {
+    background: url("../images/mini_white/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__fee {
+    background: url("../images/mini_white/fee.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconWhite__others__expense {
+    background: url("../images/mini_white/other.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__tax {
+    background: url("../images/mini_white/tax.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__sport {
+    background: url("../images/mini_white/sport.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 11px
+}
+
+.iconWhite__ccc {
+    background: url("../images/mini_white/laptop.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__game {
+    background: url("../images/mini_white/game.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__nursary {
+    background: url("../images/mini_white/baby.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__pet {
+    background: url("../images/mini_white/pets.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__beauty {
+    background: url("../images/mini_white/beauty.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__loan {
+    background: url("../images/mini_white/database.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__donate {
+    background: url("../images/mini_white/FirstAidKit.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__present {
+    background: url("../images/mini_white/present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__parents {
+    background: url("../images/mini_white/parents.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__pettyCash {
+    background: url("../images/mini_white/coin.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__travel {
+    background: url("../images/mini_white/travel.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__social {
+    background: url("../images/mini_white/social.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__gift__expense {
+    background: url("../images/mini_white/present.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__fixDeposit__expense {
+    background: url("../images/mini_white/piggy.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.iconWhite__moneyExchange__expense {
+    background: url("../images/mini_white/money_exchange.svg") top left no-repeat #707070;
+    background-size: 50%;
+    background-position: 10px 10px
+}
+
+.icon64 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.icon64__salary {
+    background: url("../images/mini/salary.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__mobilePay {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 18px 16px
+}
+
+.icon64__allowance {
+    background: url("../images/mini/allowance.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 15px 16px
+}
+
+.icon64__transfer {
+    background: url("../images/mini/transfer.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__interest {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__bonus {
+    background: url("../images/mini/coin.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__rent {
+    background: url("../images/mini/rent.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 16px 16px
+}
+
+.icon64__invest {
+    background: url("../images/mini/invest.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 16px 16px
+}
+
+.icon64__fixDeposit {
+    background: url("../images/mini/piggy.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__cashBack {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 14px 15px
+}
+
+.icon64__cashReturn {
+    background: url("../images/mini/cashback.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 14px 12px
+}
+
+.icon64__moneyExchange {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__loan {
+    background: url("../images/mini/database.svg") top left no-repeat #4686A5;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__insurance {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 14px 14px
+}
+
+.icon64__pension {
+    background: url("../images/mini/retire.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 15px 15px
+}
+
+.icon64__pettyCash {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 15px 15px
+}
+
+.icon64__prepay {
+    background: url("../images/mini/prepay.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 15px 15px
+}
+
+.icon64__gift {
+    background: url("../images/mini/present.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 15px 15px
+}
+
+.icon64__others {
+    background: url("../images/mini/other.svg") top left no-repeat #4686A5;
+    background-size: 55%;
+    background-position: 14px 14px
+}
+
+.icon64 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.icon64__dine {
+    background: url("../images/mini/dine.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 16px 16px
+}
+
+.icon64__cloth {
+    background: url("../images/mini/cloth.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 15px 17px
+}
+
+.icon64__living {
+    background: url("../images/mini/sofa.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 14px 16px
+}
+
+.icon64__rent_expense {
+    background: url("../images/mini/rent.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 16px 16px
+}
+
+.icon64__transport {
+    background: url("../images/mini/car.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 21px
+}
+
+.icon64__education {
+    background: url("../images/mini/education.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 16px 18px
+}
+
+.icon64__entertainment {
+    background: url("../images/mini/entertainment.svg") top left no-repeat #E34848;
+    background-size: 55%;
+    background-position: 15px 17px
+}
+
+.icon64__shopping {
+    background: url("../images/mini/shopping.svg") top left no-repeat #E34848;
+    background-size: 35%;
+    background-position: 21px 16px
+}
+
+.icon64__creditCard {
+    background: url("../images/mini/creditCard.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__transfer__expense {
+    background: url("../images/mini/transfer.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__mobilePay__expense {
+    background: url("../images/mini/mobile_pay.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 19px 16px
+}
+
+.icon64__allowance__expense {
+    background: url("../images/mini/allowance.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 15px 16px
+}
+
+.icon64__fixDeposit__expense {
+    background: url("../images/mini/piggy.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__moneyExchange__expense {
+    background: url("../images/mini/money_exchange.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__medical {
+    background: url("../images/mini/medical.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__insurance__expense {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 15px
+}
+
+.icon64__fee {
+    background: url("../images/mini/fee.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__others__expense {
+    background: url("../images/mini/other.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__tax {
+    background: url("../images/mini/tax.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__invest__expense {
+    background: url("../images/mini/invest.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 18px 16px
+}
+
+.icon64__sport {
+    background: url("../images/mini/sport.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 17px
+}
+
+.icon64__ccc {
+    background: url("../images/mini/laptop.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__game {
+    background: url("../images/mini/game.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 15px
+}
+
+.icon64__nursary {
+    background: url("../images/mini/baby.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 15px 16px
+}
+
+.icon64__pet {
+    background: url("../images/mini/pets.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__beauty {
+    background: url("../images/mini/beauty.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__loan__expense {
+    background: url("../images/mini/database.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__donate {
+    background: url("../images/mini/FirstAidKit.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__present {
+    background: url("../images/mini/present.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 15px 17px
+}
+
+.icon64__parents {
+    background: url("../images/mini/parents.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__pettyCash__expense {
+    background: url("../images/mini/CurrencyCircleDollar.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__travel {
+    background: url("../images/mini/travel.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.icon64__social {
+    background: url("../images/mini/social.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 15px 18px
+}
+
+.icon64__gift__expense {
+    background: url("../images/mini/present.svg") top left no-repeat #E34848;
+    background-size: 50%;
+    background-position: 16px 16px
+}
+
+.close {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    fill: currentcolor;
+    cursor: pointer
+}
+
+.popup {
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: #000
+}
+
+.popup.is-visible {
+    visibility: visible
+}
+
+.popup-overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(140, 140, 140, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s;
+    -o-transition: visibility 0s linear 0.3s, opacity 0.3s;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px)
+}
+
+.popup.is-visible .popup-overlay {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s
+}
+
+.popup-wrapper {
+    position: absolute;
+    z-index: 9999;
+    top: 12em;
+    width: 90%;
+    background-color: #fff;
+    max-width: 320px;
+    margin-left: 35%;
+    border-radius: 8px
+}
+
+@media (min-width:415px) {
+    .popup-wrapper {
+        max-width: 380px
+    }
+}
+
+@media (max-width:414px) {
+    .popup-wrapper {
+        margin-left: 5%;
+        max-width: 380px
+    }
+}
+
+@media (max-width:375px) {
+    .popup-wrapper {
+        margin-left: 5%
+    }
+}
+
+.popup-transition {
+    -webkit-transition: all 0.3s 0.12s;
+    -o-transition: all 0.3s 0.12s;
+    transition: all 0.3s 0.12s;
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    transform: translateY(10%);
+    opacity: 0
+}
+
+.popup.is-visible .popup-transition {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+}
+
+.popup-body .btnSet {
+    margin: 10px 10px 20px 10px
+}
+
+.popup-body .btnSet__red {
+    margin: 10px 10px 20px 10px
+}
+
+.popup-content,
+.popup-header {
+    text-align: center
+}
+
+.popup-content img,
+.popup-header img {
+    width: 38px;
+    height: 34px;
+    margin: 30px 0 10px 0
+}
+
+.popup-content {
+    padding: 10px;
+    font-size: 0.9rem
+}
+
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: #aaa;
+    background: none;
+    border: 0
+}
+
+.popup-close:hover {
+    color: #777
+}
+
+.popup-heading {
+    font-size: 1.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.popup2 {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    background: #fff;
+    font-size: 1em;
+    line-height: 1.3em;
+    display: none;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    color: #4A4A4A
+}
+
+.popup2 h3 {
+    margin: 10px 0
+}
+
+.popup2 h3 span {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    color: #c4c4c4
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: none repeat fixed 0% 0% rgba(141, 141, 141, 0.7);
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px)
+}
+
+#myModal,
+#myModal1,
+#myModal2 {
+    width: 100%;
+    height: auto;
+    max-width: 768px
+}
+
+.popup2 div.content {
+    height: auto;
+    padding: 20px;
+    font-size: 0.9em
+}
+
+.popup2 div.content a img {
+    float: right;
+    top: 30px;
+    right: 20px;
+    position: absolute
+}
+
+.popup2 div.content .button {
+    width: 80%;
+    margin: 15px auto 0 auto
+}
+
+body {
+    margin: unset
+}
+
+header {
+    background-color: #fff
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.maxWidth-768 {
+    max-width: 768px;
+    overflow: hidden
+}
+
+.header-content {
+    position: relative;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 20px;
+    padding: 15px 0;
+    color: #000
+}
+
+.wrapper {
+    width: 100%
+}

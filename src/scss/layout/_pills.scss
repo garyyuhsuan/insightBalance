@@ -1,0 +1,826 @@
+//首頁>明細
+//預設樣式
+.pills {
+   font-size: 0.8rem;
+   color: $white;
+   border-radius: 15px;
+   padding: 2px 5px 3px 20px;
+   background-color: $gray600  !important;
+
+   &__unDefine,
+   &__unDefine__expense {
+      background: url("../images/mini_white/icon_unknow-w.svg") top left no-repeat;
+      background-position: 2px center;
+
+   }
+
+   &__salary {
+      background: url("../images/mini_white/icon_salary-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__allowance {
+      background: url("../images/mini_white/icon_allowance-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__transfer {
+      background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__interest {
+      background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__bonus {
+      background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__rent {
+      background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__cashBack {
+      background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__cashReturn {
+      background: url("../images/mini_white/icon_cashback-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__invest {
+      background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__fixDeposit {
+      background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__moneyExchange {
+      background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__loanIncome {
+      background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__insurance {
+      background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__pension {
+      background: url("../images/mini_white/icon_retire-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__cash {
+      background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__prepay {
+      background: url("../images/mini_white/icon_prepay-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__gift {
+      background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__others {
+      background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__dine {
+      background: url("../images/mini_white/icon_dine-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__cloth {
+      background: url("../images/mini_white/icon_cloth-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__living {
+      background: url("../images/mini_white/icon_sofa-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__rent__expense {
+      background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__transport {
+      background: url("../images/mini_white/icon_car-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__education {
+      background: url("../images/mini_white/icon_education-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__entertainment {
+      background: url("../images/mini_white/icon_entertainment-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__shopping {
+      background: url("../images/mini_white/icon_shopping-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__creditCard {
+      background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__transfer__expense {
+      background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__mobilePay__expense {
+      background: url("../images/mini_white/icon_mobilePay-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__invest__expense {
+      background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__fixDeposit__expense {
+      background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__moneyExchange__expense {
+      background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__medical {
+      background: url("../images/mini_white/icon_medical-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__sport {
+      background: url("../images/mini_white/icon_sport-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__ccc {
+      background: url("../images/mini_white/icon_laptop-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__game {
+      background: url("../images/mini_white/icon_game-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__nursary {
+      background: url("../images/mini_white/icon_baby-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__pet {
+      background: url("../images/mini_white/icon_pets-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__beauty {
+      background: url("../images/mini_white/icon_beauty-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__loan {
+      background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__tax {
+      background: url("../images/mini_white/icon_tax-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__interest__expense {
+      background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__fee {
+      background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__donate {
+      background: url("../images/mini_white/icon_donation-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__interest__expense {
+      background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__present {
+      background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__parents {
+      background: url("../images/mini_white/icon_parents-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__cash__expense {
+      background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__travel {
+      background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__social {
+      background: url("../images/mini_white/icon_social-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+
+   &__gift__expense {
+      background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+      background-position: 2px center;
+   }
+}
+
+//首頁(黑底)>明細
+//這筆不算樣式
+.exclude {
+   .pills {
+      background-color: $gray-0  !important;
+
+      &__unDefine,
+      &__unDefine__expense {
+         background: url("../images/mini_white/icon_unknow-w.svg") top left no-repeat;
+         background-position: 2px center;
+
+      }
+
+      &__salary {
+         background: url("../images/mini_white/icon_salary-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__allowance {
+         background: url("../images/mini_white/icon_allowance-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__transfer {
+         background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__interest {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__bonus {
+         background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__rent {
+         background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__cashBack {
+         background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__cashReturn {
+         background: url("../images/mini_white/icon_cashback-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__invest {
+         background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__fixDeposit {
+         background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__moneyExchange {
+         background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__loanIncome {
+         background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__insurance {
+         background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__pension {
+         background: url("../images/mini_white/icon_retire-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__cash {
+         background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__prepay {
+         background: url("../images/mini_white/icon_prepay-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__gift {
+         background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__others {
+         background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__dine {
+         background: url("../images/mini_white/icon_dine-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__cloth {
+         background: url("../images/mini_white/icon_cloth-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__living {
+         background: url("../images/mini_white/icon_sofa-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__rent__expense {
+         background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__transport {
+         background: url("../images/mini_white/icon_car-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__education {
+         background: url("../images/mini_white/icon_education-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__entertainment {
+         background: url("../images/mini_white/icon_entertainment-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__shopping {
+         background: url("../images/mini_white/icon_shopping-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__creditCard {
+         background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__transfer__expense {
+         background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__mobilePay__expense {
+         background: url("../images/mini_white/icon_mobilePay-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__invest__expense {
+         background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__fixDeposit__expense {
+         background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__moneyExchange__expense {
+         background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__medical {
+         background: url("../images/mini_white/icon_medical-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__sport {
+         background: url("../images/mini_white/icon_sport-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__ccc {
+         background: url("../images/mini_white/icon_laptop-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__game {
+         background: url("../images/mini_white/icon_game-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__nursary {
+         background: url("../images/mini_white/icon_baby-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__pet {
+         background: url("../images/mini_white/icon_pets-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__beauty {
+         background: url("../images/mini_white/icon_beauty-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__loan {
+         background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__tax {
+         background: url("../images/mini_white/icon_tax-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__interest__expense {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__fee {
+         background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__donate {
+         background: url("../images/mini_white/icon_donation-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__interest__expense {
+         background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__present {
+         background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__parents {
+         background: url("../images/mini_white/icon_parents-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__cash__expense {
+         background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__travel {
+         background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__social {
+         background: url("../images/mini_white/icon_social-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+
+      &__gift__expense {
+         background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+   }
+}
+
+//首頁(黑底)>明細
+//這筆是啥樣式
+.unkwon-detail {
+   .pills {
+      font-weight: 500;
+      background-color: $red300  !important;
+
+      &__unDefine,
+      &__unDefine__expense {
+         background: url("../images/mini_white/icon_unknow-w.svg") top left no-repeat;
+         background-position: 2px center;
+      }
+   }
+}
+
+//首頁>明細
+//預設樣式
+.cate-detial {
+   .pull_keep {
+      .pills {
+         &__unDefine,
+         &__unDefine__expense {
+            background: url("../images/mini_white/icon_unknow-w.svg") top left no-repeat;
+            background-position: 2px center;
+
+         }
+
+         &__salary {
+            background: url("../images/mini_white/icon_salary-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__allowance {
+            background: url("../images/mini_white/icon_allowance-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__transfer {
+            background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__interest {
+            background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__bonus {
+            background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__rent {
+            background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__cashBack {
+            background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__cashReturn {
+            background: url("../images/mini_white/icon_cashback-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__invest {
+            background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__fixDeposit {
+            background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__moneyExchange {
+            background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__loanIncome {
+            background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__insurance {
+            background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__pension {
+            background: url("../images/mini_white/icon_retire-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__cash {
+            background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__prepay {
+            background: url("../images/mini_white/icon_prepay-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__gift {
+            background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__others {
+            background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__dine {
+            background: url("../images/mini_white/icon_dine-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__cloth {
+            background: url("../images/mini_white/icon_cloth-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__living {
+            background: url("../images/mini_white/icon_sofa-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__rent__expense {
+            background: url("../images/mini_white/icon_rent-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__transport {
+            background: url("../images/mini_white/icon_car-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__education {
+            background: url("../images/mini_white/icon_education-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__entertainment {
+            background: url("../images/mini_white/icon_entertainment-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__shopping {
+            background: url("../images/mini_white/icon_shopping-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__creditCard {
+            background: url("../images/mini_white/icon_creditCard-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__transfer__expense {
+            background: url("../images/mini_white/icon_transfer-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__mobilePay__expense {
+            background: url("../images/mini_white/icon_mobilePay-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__invest__expense {
+            background: url("../images/mini_white/icon_invest-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__fixDeposit__expense {
+            background: url("../images/mini_white/icon_saving-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__moneyExchange__expense {
+            background: url("../images/mini_white/icon_moneyExchange-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__medical {
+            background: url("../images/mini_white/icon_medical-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__sport {
+            background: url("../images/mini_white/icon_sport-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__ccc {
+            background: url("../images/mini_white/icon_laptop-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__game {
+            background: url("../images/mini_white/icon_game-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__nursary {
+            background: url("../images/mini_white/icon_baby-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__pet {
+            background: url("../images/mini_white/icon_pets-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__beauty {
+            background: url("../images/mini_white/icon_beauty-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__loan {
+            background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__tax {
+            background: url("../images/mini_white/icon_tax-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__interest__expense {
+            background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__fee {
+            background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__donate {
+            background: url("../images/mini_white/icon_donation-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__interest__expense {
+            background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__present {
+            background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__parents {
+            background: url("../images/mini_white/icon_parents-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__cash__expense {
+            background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__travel {
+            background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__social {
+            background: url("../images/mini_white/icon_social-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+
+         &__gift__expense {
+            background: url("../images/mini_white/icon_present-w.svg") top left no-repeat;
+            background-position: 2px center;
+         }
+      }
+   }
+}

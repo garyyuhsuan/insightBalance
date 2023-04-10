@@ -1,0 +1,41 @@
+li {
+   padding: 0 !important;
+}
+li .wrap {
+   display: block;
+   height: 100%;
+   width: auto;
+   position: relative;
+   -webkit-transition: -webkit-transform 300ms ease;
+   -moz-transition: -moz-transform 300ms ease;
+   transition: transform 300ms ease;
+}
+.wrap .go, .wrap .item, .wrap .del {
+   display: inline-block;
+   padding: 0.9em;
+   text-shadow: none;
+   border-style: none;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+.wrap .item {
+   width: 100%;
+   height: 100%;
+}
+.wrap .go, .wrap .del {
+   height: 100%;
+   text-align:center;
+   font-weight: bold;
+   border-width: 1px 0;
+   border-style: solid;
+   border-color: #ddd;
+}
+.wrap .go {
+   background: #009925;
+   border-color: #009925;
+}
+.wrap .del {
+   background: #F90101;
+   border-color: #F90101;
+}

@@ -1,0 +1,94 @@
+.duration-expense
+    input(type="radio" id="byWeek" name="time-tabs" )
+    span.ease 週
+    input(type="radio" id="byMonth" name="time-tabs" checked="checked")
+    span.ease 月
+    input(type="radio" id="byYear" name="time-tabs")
+    span.ease 年
+    input(type="radio" id="byOther" name="time-tabs")
+    span.ease 其他
+    .pill-bg.ease
+
+    .swiper-week#swiperWeek
+        //- week swiper
+        .duration-swiper
+            //- Slider main container
+            .swiper
+                //- Additional required wrapper
+                .swiper-wrapper
+                    //- Slides
+                    .swiper-slide
+                        a(href="")  2022/6/13~6/19
+                    .swiper-slide
+                        a(href="")  2022/6/20~6/26
+                    .swiper-slide
+                        a(href="")  2022/6/27~7/3
+                    .swiper-slide
+                        a(href="")  2022/7/4~7/10
+                    .swiper-slide
+                        a(href="")  2022/7/11~7/17
+                    .swiper-slide
+                        a(href="")  2022/7/18~7/24
+                    
+            .swiper-tool
+                //- navigation buttons
+                .swiper-button-prev
+                .swiper-button-next
+
+    .swiper-month#swiperMonth
+        //- month swiper
+        .duration-swiper
+            //- Slider main container
+            .swiper
+                //- Additional required wrapper
+                .swiper-wrapper
+                    //- Slides
+                    .swiper-slide
+                        a(href="")  2022年2月
+                    .swiper-slide
+                        a(href="")  2022年3月
+                    .swiper-slide
+                        a(href="")  2022年4月
+                    .swiper-slide
+                        a(href="")  2022年5月
+                    .swiper-slide
+                        a(href="")  2022年6月
+                    .swiper-slide
+                        a(href="")  2022年7月
+                    
+            .swiper-tool
+                //- navigation buttons
+                .swiper-button-prev
+                .swiper-button-next
+
+    .swiper-year#swiperYear
+        //- year swiper
+        .duration-swiper
+            //- Slider main container
+            .swiper
+                //- Additional required wrapper
+                .swiper-wrapper
+                    //- Slides
+                    .swiper-slide
+                        a(href="")  2017年
+                    .swiper-slide
+                        a(href="")  2018年
+                    .swiper-slide
+                        a(href="")  2019年
+                    .swiper-slide
+                        a(href="")  2020年
+                    .swiper-slide
+                        a(href="")  2021年
+                    .swiper-slide
+                        a(href="")  2022年
+                    
+            .swiper-tool
+                //- navigation buttons
+                .swiper-button-prev
+                .swiper-button-next 
+
+    .swiper-other#swiperOthers
+        .search__others 
+            .date__edit 2022/7/1~2022/7/31
+            a.popup_toggle(href="#myModal1") 
+                img(src="./images/global/icon_edit.svg")
