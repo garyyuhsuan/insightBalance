@@ -11,7 +11,7 @@ append style
 
 //- main 區塊
 append main 
-  .container-fluid.maxWidth-768
+  .container-fluid.maxWidth-768.min-height__scroll
     .wrapper.income
       .main__categoryDetail
     .canvas.cat
@@ -31,12 +31,12 @@ append main
       .sort__number#sorting 
         span  共189筆             
         a(href="#myModal").icon__sorting.popup_toggle
- 
+
       .details
 
         .heading__date 2022年2月
 
-        ul.list
+        ul.list.cate-detial
           li.pull_keep
             a(href="list_details_in.html")
               .flxList
@@ -73,7 +73,7 @@ append main
 
         .cat.heading__date 2022年2月
 
-        ul.list
+        ul.list.cate-detial
           li.pull_keep
             a(href="list_details_in.html")
               .flxList 
@@ -121,6 +121,7 @@ append script
   script(src="./js/vendor/pullkeep.js") 
   script(src="./js/vendor/custom-select.securejs")
   script(src="./js/vendor/pk.js")
+  script(src="./js/bounceIn.js")
 
 
 

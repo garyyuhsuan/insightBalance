@@ -6,6 +6,7 @@ append vars
 
 //- 單頁樣式，或若有第三方樣式從這增加
 append style  
+  //- link(rel="stylesheet" href="./css/jqpreloader.css")
   link(rel="stylesheet" href="./css/master.css")
 
 //- main 區塊
@@ -51,8 +52,7 @@ append main
         #categories
           .details__notice            
             .details__notice--text 包含「薪資」的搜尋結果如下
-            a(href="") 清除搜尋  
-
+            a(href="") 清除搜尋
 
           .filter__group
             a(href="").btn 金額自訂 
@@ -61,13 +61,12 @@ append main
               img(src="./images/global/icon_close_white.svg")
 
           .categories
-            li 
+            li.list
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .earning__most 
-                    .icon-cat.icon-cat__salary
-
+                    .earning__most  
+                    .icon-cat.icon-cat__salary                    
                   .category__flxCol2
                     .category__flxRow1
                       .category__name 薪資 
@@ -76,259 +75,229 @@ append main
 
                     .category__flxRow2
                       .category__percent 65%
-                      .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+                      .category__amount.amount-style.color-ex 50,500,000,085       
+            li.list
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__transfer
-
+                    .icon-cat.icon-cat__transfer                    
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 帳戶互轉
-                      .category__num 123454113 筆
+                      .category__name 帳號互轉 
+                      .category__num 134562 筆
+
+                    .category__flxRow2
+                      .category__percent 65%
+                      .category__amount.amount-style.color-ex 50,500,000,085      
+            li.list 
+              a(href="category_details_ex.html")
+                .category
+                  .category__flxCol1
+                    .icon-cat.icon-cat__bonus                   
+                  .category__flxCol2
+                    .category__flxRow1
+                      .category__name 獎金 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__interest
-
+                    .icon-cat.icon-cat__rent                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 利息
-                      .category__num 123454113 筆
+                      .category__name 租金 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__bonus
-
+                    .icon-cat.icon-cat__cashReturn                   
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 獎金
-                      .category__num 123454113 筆
+                      .category__name 退款 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__rent
-
+                    .icon-cat.icon-cat__invest                 
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 租金
-                      .category__num 123454113 筆
+                      .category__name 投資 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__cashReturn
-
+                    .icon-cat.icon-cat__fixDeposit               
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 退款
-                      .category__num 123454113 筆
+                      .category__name 定存 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__invest
-
+                    .icon-cat.icon-cat__cashBack                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 投資
-                      .category__num 123454113 筆
+                      .category__name 現金回饋 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
+              a(href="category_details.html")
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__fixDeposit
-
+                    .icon-cat.icon-cat__moneyExchange                   
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 定存
-                      .category__num 123454113 筆
+                      .category__name 換匯 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__cashBack
-
+                    .icon-cat.icon-cat__loanIncome                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 現金回饋
-                      .category__num 123454113 筆
+                      .category__name 貸款 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__moneyExchange
-
+                    .icon-cat.icon-cat__insurance                   
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 換匯
-                      .category__num 123454113 筆
+                      .category__name 保險 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__loanIncome
-
+                    .icon-cat.icon-cat__pension                   
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 貸款
-                      .category__num 123454113 筆
+                      .category__name 退休金 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__insurance
-
+                    .icon-cat.icon-cat__cash                   
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 保險
-                      .category__num 123454113 筆
+                      .category__name 零用金 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__pension
-
+                    .icon-cat.icon-cat__prepay                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 退休金
-                      .category__num 123454113 筆
+                      .category__name 代墊款 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__cash
-
+                    .icon-cat.icon-cat__gift                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 零用金
-                      .category__num 123454113 筆
+                      .category__name 贈與 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__prepay
-
+                    .icon-cat.icon-cat__allowance                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 代墊款
-                      .category__num 123454113 筆
+                      .category__name 補助 
+                      .category__num 134562 筆
+
+                    .category__flxRow2
+                      .category__percent 65%
+                      .category__amount.amount-style.color-ex 50,500,000,085         
+            li.list
+              a(href="category_details_ex.html")
+                .category
+                  .category__flxCol1
+                    .icon-cat.icon-cat__others                 
+                  .category__flxCol2
+                    .category__flxRow1
+                      .category__name 其他 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
                       .category__amount.amount-style.color-ex 50,500,000,085
-            li 
+            li.list 
               a(href="category_details_ex.html")
                 .category
                   .category__flxCol1
-                    .icon-cat.icon-cat__gift
-
+                    .icon-cat.icon-cat__unDefine                  
                   .category__flxCol2
                     .category__flxRow1
-                      .category__name 贈與
-                      .category__num 123454113 筆
+                      .category__name 這筆是啥 
+                      .category__num 134562 筆
 
                     .category__flxRow2
                       .category__percent 65%
-                      .category__amount.amount-style.color-ex 50,500,000,085
-            li 
-              a(href="category_details_ex.html")
-                .category
-                  .category__flxCol1
-                    .icon-cat.icon-cat__allowance
-
-                  .category__flxCol2
-                    .category__flxRow1
-                      .category__name 補助
-                      .category__num 123454113 筆
-
-                    .category__flxRow2
-                      .category__percent 65%
-                      .category__amount.amount-style.color-ex 50,500,000,085
-            li 
-              a(href="category_details_ex.html")
-                .category
-                  .category__flxCol1
-                    .icon-cat.icon-cat__others
-
-                  .category__flxCol2
-                    .category__flxRow1
-                      .category__name 其他
-                      .category__num 123454113 筆
-
-                    .category__flxRow2
-                      .category__percent 65%
-                      .category__amount.amount-style.color-ex 50,500,000,085        
-            li 
-              a(href="category_details_ex.html")
-                .category
-                  .category__flxCol1
-                    .icon-cat.icon-cat__unDefine
-                  .category__flxCol2
-                    .category__flxRow1
-                      .category__name 這筆是啥
-                      .category__num 123454113 筆
-
-                    .category__flxRow2
-                      .category__percent 65%
-                      .category__amount.amount-style.color-ex 50,500,000,085  
-
+                      .category__amount.amount-style.color-ex 50,500,000,085          
 
             .gotop#gotop(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })")           
             .total__summary#totalSummary
@@ -338,7 +307,7 @@ append main
                 span.float-btn-amount.color-ex 1,455,445 
 
 
-        #details(style="display:none;")
+        #details(style="display:none;") 
           .details__notice            
             .details__notice--text 包含「薪資」的搜尋結果如下
             a(href="") 清除搜尋
@@ -363,7 +332,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__salary 薪資
+                        .pills.pills__salary 薪資
                       .list__content 2月份薪資
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -374,7 +343,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill.unkwon-detail 
-                        span.pills.pills__unDefine 這筆是啥
+                        .pills.pills__unDefine 這筆是啥
                       .list__content 股票款3034-聯詠9股票款3034-聯詠9
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -385,18 +354,18 @@ append main
                   .flxList.exclude 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__transfer 帳號互轉
+                        .pills.pills__transfer 帳號互轉
                       .list__content 換匯款項
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
                       .list__date 2022/03/22
                       .list__account 營業部DAWHO活期儲蓄存款
               li.pull_keep
-                a(href="list_details_ex.html")
+                a(href="list_details.html")
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__interest 利息
+                        .pills.pills__interest 利息
                       .list__content 股票利息3034-聯詠9股票款3034-聯詠9
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -407,7 +376,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__bonus 獎金
+                        .pills.pills__bonus 獎金
                       .list__content 2月份獎金
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -418,7 +387,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__rent 租金
+                        .pills.pills__rent 租金
                       .list__content 大直小窩租金
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -429,7 +398,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__cashBack 現金回饋
+                        .pills.pills__cashBack 現金回饋
                       .list__content Cashback現金回饋
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -440,7 +409,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__cashReturn 退款
+                        .pills.pills__cashReturn 退款
                       .list__content 永豐信用卡費
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -451,7 +420,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__invest 投資
+                        .pills.pills__invest 投資
                       .list__content 投資信託
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -462,7 +431,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__fixDeposit 定存
+                        .pills.pills__fixDeposit 定存
                       .list__content ３月份定存
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -473,7 +442,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__moneyExchange 換匯
+                        .pills.pills__moneyExchange 換匯
                       .list__content 美金兌換
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -484,7 +453,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__loanIncome 貸款
+                        .pills.pills__loanIncome 貸款
                       .list__content 富邦信貸
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -495,7 +464,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__insurance 保險
+                        .pills.pills__insurance 保險
                       .list__content 南山人壽儲蓄險
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -506,7 +475,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__pension 退休金
+                        .pills.pills__pension 退休金
                       .list__content 退休金３月
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -517,7 +486,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__cash 零用金
+                        .pills.pills__cash 零用金
                       .list__content 零用金餘額
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -528,7 +497,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__prepay 代墊款
+                        .pills.pills__prepay 代墊款
                       .list__content 聚餐代墊款
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -539,7 +508,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__gift 贈與
+                        .pills.pills__gift 贈與
                       .list__content 父母節稅贈與
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -550,7 +519,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__allowance 補助
+                        .pills.pills__allowance 補助
                       .list__content 選舉補助
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -561,7 +530,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__others 其他
+                        .pills.pills__others 其他
                       .list__content 股票款3034-聯詠9股票款3034-聯詠9
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -576,7 +545,7 @@ append main
                   .flxList 
                     .flxList__line1 
                       .list__pill 
-                        span.pills.pills__salary 薪資
+                        .pills.pills__salary 薪資
                       .list__content ２月份薪資
                       .list__amount.amount-style.color-ex 100,000 
                     .flxList__line2
@@ -589,7 +558,7 @@ append main
             //-提示 - 已經到底
             ul.list
               li 
-                .flxList__end
+                .flxList__end 已經到底囉~
 
             .gotop#gotop2(onclick="window.scrollTo({ top: 0, behavior: 'smooth' })") 
             .total__summary#totalSummary2 

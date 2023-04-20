@@ -1,3 +1,22 @@
+function topFunction() {
+  (document.body.scrollTop = 0), (document.documentElement.scrollTop = 0);
+}
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    $(".reveal").each(function (i) {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it in */
+      if (bottom_of_window > bottom_of_object) {
+        $(this).animate({ opacity: "1" }, 1500);
+        /* 1500 is the duration of fade effect */
+      }
+    });
+  });
+});
+
 $(document).ready(function () {
   $("#tab1").click(function () {
     $("#categories").show();
@@ -22,7 +41,8 @@ $(document).ready(function () {
     }),
     $(".customAll").click(function () {
       $(".customDurationInput").hide();
-    });
+    }),
+    $("#msg_board").delay(4e3).hide(0);
 }),
   $(function () {
     $(".pull_keep").pullkeep(function (t) {
@@ -78,4 +98,147 @@ window.onscroll = function () {
 $(".c-radio").click(function () {
   $(this).toggleClass("active");
   $(this).siblings().removeClass("active");
+});
+
+/*jquery and jqueryUI (for EASING Bounce effect) required*/
+$(document).ready(function () {
+  //DOM ready
+
+  /* if div with class="li.li" is visible in actual viewport, 
+    fade it in with bounce effect */
+  $("li.list").each(function (i) {
+    /*change position of each card*/
+    $(this).css({ opacity: "0", "margin-top": "10px" });
+
+    //current viewport's top position
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+    var obj = $(this).position().top + $(this).outerHeight();
+    //current viewport's bottom position
+    var scrollBottom = scrollTop + height + $(this).height();
+
+    if (scrollBottom > obj) {
+      $(this)
+        .animate({ opacity: "1" }, { queue: false, duration: 600 })
+        .animate({ marginTop: "0px" }, 600, "swing");
+    }
+  });
+
+  /* scrolling to bottom: if visible in viewport, fade div in with delay */
+  $(window).scroll(function () {
+    $("li.list").each(function (i) {
+      var scrollTop = $(window).scrollTop();
+      var height = $(window).height();
+      var obj = $(this).position().top + $(this).outerHeight();
+      var scrollBottom = scrollTop + height + $(this).height();
+      if (scrollBottom > obj) {
+        $(this)
+          // .delay(600)
+          // .animate({ opacity: "1" }, { queue: false, duration: 400 })
+          // .animate(
+          //   { marginTop: "0px" },
+          //   { queue: false, duration: 400, easing: "swing" }
+          // );
+          .animate({ opacity: "1" }, { queue: false, duration: 600 })
+          .animate({ marginTop: "0px" }, 600, "swing");
+      }
+    });
+  });
+  $("#tab2").click(function () {
+    // alert("click tab2")
+    $("li.pull_keep").each(function (i) {
+      /*change position of each card*/
+      $(this).css({ opacity: "0", "margin-top": "10px" });
+      //current viewport's top position
+      var scrollTop = $(window).scrollTop();
+      var height = $(window).height();
+      var obj = $(this).position().top + $(this).outerHeight();
+      //current viewport's bottom position
+      var scrollBottom = scrollTop + height + $(this).height();
+
+      if (scrollBottom > obj) {
+        $(this)
+          .animate({ opacity: "1" }, { queue: false, duration: 600 })
+          .animate({ marginTop: "0px" }, 600, "swing");
+      }
+    });
+
+    /* scrolling to bottom: if visible in viewport, fade div in with delay */
+    $(window).scroll(function () {
+      $("li.pull_keep").each(function (i) {
+        var scrollTop = $(window).scrollTop();
+        var height = $(window).height();
+        var obj = $(this).position().top + $(this).outerHeight();
+        var scrollBottom = scrollTop + height + $(this).height();
+
+        if (scrollBottom > obj) {
+          $(this)
+            // .delay(600)
+            // .animate({ opacity: "1" }, { queue: false, duration: 800 })
+            // .animate(
+            //   { marginTop: "0px" },
+            //   { queue: false, duration: 800, easing: "swing" }
+            // );
+            .animate({ opacity: "1" }, { queue: false, duration: 600 })
+            .animate({ marginTop: "0px" }, 600, "swing");
+        }
+      });
+    });
+  });
+  $("#tab1").click(function () {
+    // alert("click tab1")
+    $("li.list").each(function (i) {
+      /*change position of each card*/
+      $(this).css({ opacity: "0", "margin-top": "10px" });
+      //current viewport's top position
+      var scrollTop = $(window).scrollTop();
+      var height = $(window).height();
+      var obj = $(this).position().top + $(this).outerHeight();
+      //current viewport's bottom position
+      var scrollBottom = scrollTop + height + $(this).height();
+
+      if (scrollBottom > obj) {
+        $(this)
+          .animate({ opacity: "1" }, { queue: false, duration: 600 })
+          .animate({ marginTop: "0px" }, 600, "swing");
+      }
+    });
+
+    /* scrolling to bottom: if visible in viewport, fade div in with delay */
+    $(window).scroll(function () {
+      $("li.list").each(function (i) {
+        var scrollTop = $(window).scrollTop();
+        var height = $(window).height();
+        var obj = $(this).position().top + $(this).outerHeight();
+        var scrollBottom = scrollTop + height + $(this).height();
+
+        if (scrollBottom > obj) {
+          $(this)
+            // .delay(600)
+            // .animate({ opacity: "1" }, { queue: false, duration: 800 })
+            // .animate(
+            //   { marginTop: "0px" },
+            //   { queue: false, duration: 800, easing: "swing" }
+            // );
+            .animate({ opacity: "1" }, { queue: false, duration: 600 })
+            .animate({ marginTop: "0px" }, 600, "swing");
+        }
+      });
+    });
+  });
+});
+
+// 切換分類明細，並使用動畫
+$("#tab1").click(function () {
+  $("#categories").show();
+  $("#details").hide();
+  $("#tab1").removeClass("inactive");
+  $("#tab2").addClass("inactive");
+});
+
+$("#tab2").click(function () {
+  $("#categories").show();
+  $("#details").hide();
+  $("#tab2").removeClass("inactive");
+  $("#tab1").addClass("inactive");
 });

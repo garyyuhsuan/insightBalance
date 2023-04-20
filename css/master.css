@@ -431,7 +431,7 @@ a:link {
   background-position: 2px center;
 }
 .pills__cash {
-  background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
   background-position: 2px center;
 }
 .pills__prepay {
@@ -443,6 +443,10 @@ a:link {
   background-position: 2px center;
 }
 .pills__others {
+  background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+  background-position: 2px center;
+}
+.pills__others__expense {
   background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
   background-position: 2px center;
 }
@@ -658,6 +662,10 @@ a:link {
   background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
   background-position: 2px center;
 }
+.exclude .pills__others__expense {
+  background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+  background-position: 2px center;
+}
 .exclude .pills__dine {
   background: url("../images/mini_white/icon_dine-w.svg") top left no-repeat;
   background-position: 2px center;
@@ -861,7 +869,7 @@ a:link {
   background-position: 2px center;
 }
 .cate-detial .pull_keep .pills__cash {
-  background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
   background-position: 2px center;
 }
 .cate-detial .pull_keep .pills__prepay {
@@ -873,6 +881,10 @@ a:link {
   background-position: 2px center;
 }
 .cate-detial .pull_keep .pills__others {
+  background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
+  background-position: 2px center;
+}
+.cate-detial .pull_keep .pills__others__expense {
   background: url("../images/mini_white/icon_other-w.svg") top left no-repeat;
   background-position: 2px center;
 }
@@ -1087,7 +1099,7 @@ a:link {
   background-position: 50% 50%;
 }
 .icon-cat__cash {
-  background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
 }
@@ -1176,13 +1188,10 @@ a:link {
   background-size: 50%;
   background-position: 50% 50%;
 }
-.icon-cat__payCash {
-  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+.icon-cat__insurance__expense {
+  background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
-}
-.icon-cat__insurance__expense {
-  background: url("../images/mini_white/icon_FirstAidKit-w.svg") top left no-repeat;
 }
 .icon-cat__fee {
   background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
@@ -1256,6 +1265,8 @@ a:link {
 }
 .icon-cat__cash__expense {
   background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
 }
 .icon-cat__travel {
   background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
@@ -1350,7 +1361,7 @@ a:link {
   background-size: 50%;
   background-position: 50% 50%;
 }
-.icon-editCat__loan {
+.icon-editCat__loanIncome {
   background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
@@ -1455,13 +1466,10 @@ a:link {
   background-size: 50%;
   background-position: 50% 50%;
 }
-.icon-editCat__payCash {
-  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+.icon-editCat__insurance__expense {
+  background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
-}
-.icon-editCat__insurance__expense {
-  background: url("../images/mini_white/icon_FirstAidKit-w.svg") top left no-repeat;
 }
 .icon-editCat__fee {
   background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
@@ -1535,6 +1543,8 @@ a:link {
 }
 .icon-editCat__cash__expense {
   background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
 }
 .icon-editCat__travel {
   background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
@@ -1704,7 +1714,7 @@ a:link {
   background-position: 50% 50%;
 }
 .icon-listDetails__cash {
-  background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
 }
@@ -1793,13 +1803,10 @@ a:link {
   background-size: 50%;
   background-position: 50% 50%;
 }
-.icon-listDetails__payCash {
-  background: url("../images/mini_white/icon_CurrencyCircleDollar-w.svg") top left no-repeat;
+.icon-listDetails__insurance__expense {
+  background: url("../images/mini_white/icon_insurance-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
-}
-.icon-listDetails__insurance__expense {
-  background: url("../images/mini_white/icon_FirstAidKit-w.svg") top left no-repeat;
 }
 .icon-listDetails__fee {
   background: url("../images/mini_white/icon_fee-w.svg") top left no-repeat;
@@ -1851,7 +1858,7 @@ a:link {
   background-size: 50%;
   background-position: 50% 50%;
 }
-.icon-listDetails__loan {
+.icon-listDetails__loanIncome {
   background: url("../images/mini_white/icon_loan-w.svg") top left no-repeat;
   background-size: 50%;
   background-position: 50% 50%;
@@ -1873,6 +1880,8 @@ a:link {
 }
 .icon-listDetails__cash__expense {
   background: url("../images/mini_white/icon_coin-w.svg") top left no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
 }
 .icon-listDetails__travel {
   background: url("../images/mini_white/icon_travel-w.svg") top left no-repeat;
@@ -2975,8 +2984,13 @@ a:link {
   font-size: 20px;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: unset;
+  height: 100%;
 }
 
 header {
@@ -3925,6 +3939,9 @@ input[type=text].filter {
 }
 .slider__track--ex input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   height: 18px;
   width: 18px;
   background-color: #E34848;
@@ -3935,6 +3952,8 @@ input[type=text].filter {
 }
 .slider__track--ex input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
+  border: none;
+  box-shadow: none;
   height: 18px;
   width: 18px;
   cursor: pointer;
@@ -3944,6 +3963,8 @@ input[type=text].filter {
 }
 .slider__track--ex input[type=range]::-ms-thumb {
   appearance: none;
+  border: none;
+  box-shadow: none;
   height: 18px;
   width: 18px;
   cursor: pointer;
@@ -3986,6 +4007,9 @@ input[type=text].filter {
 }
 .slider__track--in input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   height: 18px;
   width: 18px;
   background-color: #8DC1CE;
@@ -3996,6 +4020,8 @@ input[type=text].filter {
 }
 .slider__track--in input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
+  border: none;
+  box-shadow: none;
   height: 18px;
   width: 18px;
   cursor: pointer;
@@ -4005,6 +4031,8 @@ input[type=text].filter {
 }
 .slider__track--in input[type=range]::-ms-thumb {
   appearance: none;
+  border: none;
+  box-shadow: none;
   height: 18px;
   width: 18px;
   cursor: pointer;
@@ -4252,6 +4280,9 @@ table.slider__txt td:nth-child(2) {
 .list-detail__list:nth-child(odd) {
   background: #FAFAFA;
 }
+.list-detail__list .wrap__break {
+  overflow-wrap: break-word;
+}
 
 .switch {
   position: relative;
@@ -4318,6 +4349,9 @@ input:checked + .slider:before {
 }
 
 .input__description {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   width: calc(100% - 25px);
   font-size: 1rem;
   padding: 10px;
@@ -4412,6 +4446,17 @@ input:checked + .slider:before {
   font-size: 1rem;
   text-align: center;
   border: 1px solid #707070;
+}
+
+.min-height__100--ex {
+  min-height: 100%;
+  background: url("../images/global/bg_pink.png") top center no-repeat;
+  background-size: cover;
+}
+.min-height__100--in {
+  min-height: 100%;
+  background: url("../images/global/bg_blue.png") top center no-repeat;
+  background-size: cover;
 }
 
 .income {
@@ -4568,7 +4613,7 @@ input:checked + .slider:before {
 }
 .category__more p {
   position: relative;
-  color: #004D99;
+  color: #004d99;
   font-size: 14px;
   cursor: pointer;
 }
@@ -4728,26 +4773,65 @@ input:checked + .slider:before {
   display: -ms-flexbox;
   display: flex;
 }
-.header a {
-  padding: 10px 10px 5px 10px;
+.header > a {
+  padding: 15px 10px 5px 10px;
   text-decoration: none;
   color: #707070;
   cursor: pointer;
   width: 50%;
   text-align: center;
-  border-bottom: 2px solid #C4C4C4;
+  border-bottom: 1px solid #C4C4C4;
+  position: relative;
 }
-.header a.color-in {
-  border-color: #4686A5;
+.header > a.color-in {
   color: #4686A5;
 }
-.header a.color-ex {
-  border-color: #CF0209;
+.header > a.color-in::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #4686A5;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.header > a.color-in:hover::after, .header > a.color-in:focus::after, .header > a.color-in:active::after {
+  width: 100%;
+  -webkit-transition: width 300ms ease-in-out;
+  -o-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+}
+.header > a.color-ex {
   color: #CF0209;
 }
-.header a.inactive {
+.header > a.color-ex::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #CF0209;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.header > a.color-ex:hover::after, .header > a.color-ex:focus::after, .header > a.color-ex:active::after {
+  width: 100%;
+  -webkit-transition: width 300ms ease-in-out;
+  -o-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+}
+.header > a:not(.inactive)::after {
+  width: 100%;
+}
+.header > a.inactive {
   border-bottom: 1px solid #C4C4C4;
-  color: #C4C4C4;
+  color: #707070;
+}
+.header > a.inactive::after {
+  width: 0;
 }
 
 .sticky {
@@ -5889,4 +5973,8 @@ input[type=text].filter__date.error {
   background-color: #4686A5;
   background-repeat: no-repeat;
   background-size: 90%;
+}
+
+.reveal {
+  opacity: 0;
 }

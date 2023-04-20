@@ -16,47 +16,47 @@ append main
     .canvas.expense
       .list-detail__container.flex-box.border-bottom--ex
         .list-detail__container-left
-          .icon-listDetails.icon-listDetails__invest__expense
+          .icon-listDetails.icon-listDetails__cash__expense
         .list-detail__container-right
           .flex-top.flex-between
             .flex-left
               .list-detail__title.bold 投資
               .edit-img
                 a(href="edit_categories_ex.html")
-                  img(src="./images/global/icon_edit_gray.svg", alt="")
+                  img(src="./images/global/icon_edit_gray.svg" alt="")
             .flex-right      
               .close-img
                 a(href="category_details_ex.html")
-                  img(src="./images/global/icon_close_x.svg", alt="")
+                  img(src="./images/global/icon_close_x.svg" alt="")
           .flex-bottom
             .list-detail__amount--ex.bold - 32,423           
       //- list-detail 下方內容
       .list-detail__container
         .list-detail__list
-            .flex-box.flex-between
-              span 交易說明
-              .edit-description-img
-                a(href="#myModal").popup_toggle
-                  img(src="./images/global/icon_edit_gray.svg", alt="")
-            .bold 豐存股-定股交割
+          .flex-box.flex-between
+            span 交易說明
+            .edit-description-img
+              a(href="#myModal").popup_toggle
+                img(src="./images/global/icon_edit_gray.svg" alt="")
+          .bold.wrap__break 豐存股-定股交割豐存股-定股交割豐存股-定股交割豐存股-定股交割豐存股-定股交割
         .list-detail__list
-            span 交易日
-            .bold 2022/03/20
+          span 交易日
+          .bold.wrap__break 2022/03/20
         .list-detail__list
-            span 帳號資訊
-            .bold 營業部DAWHO台幣活期存款         
+          span 帳號資訊
+          .bold.wrap__break 營業部DAWHO台幣活期存款         
         .list-detail__list
-            span 交易通路
-            .bold 永豐證券 
+          span 交易通路
+          .bold.wrap__break 永豐證券 
         .list-detail__list
-            span 匯率
-            .bold -
+          span 匯率
+          .bold.wrap__break -
         .list-detail__list
           .flex-between
-              .bold 這筆不算 
-              label.switch
-                input(type="checkbox" checked)
-                span.slider.round
+            .bold 這筆不算 
+            label.switch
+              input(type="checkbox" checked)
+              span.slider.round
           .buttonSet__red
             a(href="category_details_ex.html")  取消
             //-a(href="category_details.html").primary 套用
@@ -68,14 +68,14 @@ append main
             .bold.text 交易說明
             .flex-box
               .reset-btn-img
-                img(src="./images/global/restore_description.svg", alt="") 
+                img(src="./images/global/restore_description.svg" alt="") 
               button.rest(type='reset') 回復預設說明
           input(type="text" placeholder="請輸入交易說明" value="豐存股-定股交割").input__description 
-          
+
         .buttonSet__red
           a(href="") 取消
           a(href="").primary 儲存
-            
+
 //- 單頁 Javascript
 append script  
   script. 
